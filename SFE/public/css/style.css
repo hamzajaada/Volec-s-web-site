@@ -1,0 +1,224 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+   
+}
+h2{
+    font-family: 'Saira', sans-serif;
+    margin-top: 10px;
+}
+ul{
+    display: flex;
+    margin-top: 23px;
+   margin-left: 50px;
+}
+li{
+    margin-right: 70px;
+    list-style: none;
+}
+.Contact,.Faisons,.menu,.Services,.Projets{
+    text-decoration: none;
+    color: black;
+}
+.Contact:hover,.Faisons:hover,.menu:hover,.Services:hover,.Projets:hover{
+    
+    color: black;
+}
+.link{
+    display: flex;
+}
+.login,.Register{
+    margin-right: 10px;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-left: 8px;
+    margin-top: 5px;
+
+}
+.Register{
+background-color: #82CE2F;
+}
+.Link-register{
+    text-decoration: none;
+    color:white;
+}
+.Link-register:hover{
+    
+    color: white;
+}
+.Link-login{
+    text-decoration: none;
+    color: black;
+}
+.Link-login:hover{
+    
+    color: black;
+}
+.Link-login{
+    margin-left: 6px;
+}
+img{
+    width: 100px;
+    height: 40px;
+}
+.part1{
+    margin-top: 50px;
+    
+}
+.logo-part1{
+    margin-top: 120px;
+    text-align: center;
+}
+.logo-part1 img{
+    width: 850px;
+    height: 380px;
+}
+#text-part1{
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+
+}
+.button-1{
+    width: 203px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #82CE2F;
+    margin-left: 675px;
+    padding-top: 3px;
+    margin-top: 50px;
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+.button-1:hover{
+    background-color: #57901a;
+    transform: scale(1.11);
+}
+.view-more{
+    text-decoration: none;
+    color:white;
+    margin-left: 56px;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.view-more:hover{
+    color: white;
+}
+.P-2{
+    margin-top: 120px;
+    display: flex;
+}
+.titre-desc{
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    margin-top: 60px;
+    margin-left: 220px;
+}
+.desc{
+    padding-top: 20px;
+    width: 763px;
+    height: 301px;
+    margin-left: 196px;
+}
+.text-desc{
+    font-size: 1.3em;
+}
+.P-3-titre{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    color: #82CE2F;
+}
+.main{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card1-comp{
+    width: 300px;
+    height: 300px;
+    border-radius: 13px;
+    padding-left: 23px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    margin: 30px;
+
+}
+.img-comp{
+    width: 250px;
+    height: 190px;
+    
+}
+.img-comp img{
+    width: 250px;
+    height: 190px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.des-comp{
+    width: 250px;
+    height: 90px;
+  
+    margin-top: 30px;
+}
+.comp-text{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+}
+.titre-P-4{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    color: #82CE2F;
+}
+.card2-serv{
+    width: 300px;
+    height: 288px;
+    border-radius: 13px;
+    padding-left: 23px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    margin: 30px;
+    padding-bottom: 10px;
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+.card2-serv:hover{
+    transform: scale(1.11);
+}
+.img-serv{
+    width: 250px;
+    height: 190px;
+    
+}
+.img-serv img{
+    width: 250px;
+    height: 190px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.des-serv{
+    width: 250px;
+    height: 90px;
+  
+    margin-top: 30px;
+}
+.serv-text{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+}
+i{
+    color:#82CE2F;
+    margin-left:250px; 
+    font-size: 1.3em;
+    
+}
