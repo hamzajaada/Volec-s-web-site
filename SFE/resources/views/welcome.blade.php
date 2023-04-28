@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Cabin:wght@500&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Murecho:wght@500&family=Open+Sans&family=Oswald&family=Outfit:wght@100&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Public+Sans:wght@600&family=Questrial&family=Quicksand&family=Roboto+Condensed&family=Roboto+Flex:opsz,wght@8..144,500&family=Rowdies:wght@700&family=Rubik:wght@500&family=Saira:wght@200&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet"></head>
 <body>
-    <nav style="position: fixed;width: 100%;height:7%;top:0;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav style="position: fixed;width: 100%;height:7%;top:0; z-index: 999;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <img src="image/volec.png" alt="" srcset="">
             
@@ -239,6 +239,76 @@
             </div>
 
 
+    </section>
+    <section class="P-5">
+        <i id="icone" class="fa-solid fa-square-envelope"></i>
+        <h1 class="titre-P-5">Contactez-nous dès maintenant pour découvrir comment nous pouvons vous aider à construire, rénover, maintenir et innover vos processus industriels pour assurer votre succès.</h1>
+        <div class="button-2"><a href="" class="contact-us"> Contactez-Nous </a></div> 
+    </section>
+
+    <section class="P-6">
+        <h3 class="mini-titre-P-6">CE QUI EST DIFFÉRENT!</h3>
+        <h1 class="titre-P-6">Principales raisons pour lesquelles vous devriez nous choisir !</h1>
+            <div class="notif">
+                <div class="not1">
+                    <h1 class="titre-not1"> <span>1-  </span>  CONNAISSANCE</h1>
+                    <p class="text-not">
+                        La connaissance institutionnelle est la capacité d’agir, est la somme de 
+                        l’intelligence d’entreprise, de l’éducation et des expériences
+                    </p>
+                </div>
+                <div class="not2">
+                    <h1 class="titre-not2"><span>2- </span> INNOVATION</h1>
+                    <p class="text-not">
+                        Comme nous continuons à appliquer parfaitement les solutions existantes à plusieurs reprises et, 
+                        nous adaptons toujours les dernières technologies du monde aux solutions optimales.
+                    </p>
+                </div>
+                <div class="not3">
+                    <h1 class="titre-not3"><span>3- </span> RESPECT</h1>
+                    <p class="text-not">
+                        Nous respectons nos clients et aussi leurs clients
+                    </p>
+             
+                </div>
+                <div class="not4">
+                    <h1 class="titre-not3"><span>4- </span> CONFIDENCE & TRUST</h1>
+                    <p class="text-not">
+                        Nos clients font confiance à notre organisation pour la qualité, la fiabilité et l’honnêteté; 
+                        parce qu’ils savent que nous ne ferons aucun compromis sur l’éthique professionnelle afin de gagner aujourd’hui.
+                    </p>
+                </div>
+            </div>
+            
+    
+        
+    </section>
+    <section class="P-7">
+        <div class="sec1">
+            <h2 class="sec-titre">Trouvez-nous</h2>
+            <div class="desc-footer">
+            <p class="text-footer"><i class="fas fa-map-pin"></i>   Casablanca,Maroc.</p>
+            <p class="text-footer"><i class="fas fa-phone-alt"></i>  +212(0) 5 22 75 71 76 .</p>
+            <p class="text-footer"><i class="fas fa-envelope"></i>  <a href="mailto:volec@menara.ma" class="mail"> volec@menara.ma</a></p>
+            </div>
+        </div>
+        <div class="sec2">
+            <h2 class="sec-titre">Trouvez-nous</h2>
+            <div class="lien">
+                <i id="fb" class="fab fa-facebook"></i>
+                <i id="linkd" class="fab fa-linkedin"></i>
+                <i id="insta" class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="sec3">
+            <h2 class="sec-titre">Rubriques</h2>
+            <div class="lien-reb">
+            <a href="" class="reb-lien">Que faisons nous ?</a> <br>
+            <a href="" class="reb-lien">Contactez-Nous</a> <br>
+            <a href="" class="reb-lien">Nos Services</a> <br>
+            <a href="" class="reb-lien"> Nos Compètences</a> <br>
+            </div>
+        </div>
     </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
