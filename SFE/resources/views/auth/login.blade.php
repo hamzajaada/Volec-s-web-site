@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="margin-top:50px">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body" >
+                <div class="card-body">
+                    <img style="margin-left: 100px" src="image/volec.png" alt="" srcset="">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -53,7 +54,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button style="background-color: #82cf26; border:none" type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 

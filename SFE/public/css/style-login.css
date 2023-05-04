@@ -1,0 +1,74 @@
+
+/*header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+   
+}
+/*
+h2{
+    font-family: 'Saira', sans-serif;
+    margin-top: 10px;
+}
+ul{
+    display: flex;
+    margin-top: 23px;
+   margin-left: 147px;
+}
+li{
+    margin-right: 70px;
+    list-style: none;
+}
+.Contact,.Faisons,.menu,.Services,.Projets{
+    text-decoration: none;
+    color: black;
+}
+.Contact:hover,.Faisons:hover,.menu:hover,.Services:hover,.Projets:hover{
+    
+    color: black;
+}
+.link{
+    display: flex;
+}
+.card-body{
+    display: flex;
+}
+.card{
+    box-shadow:rgb(205, 202, 202) 3px 3px 0px 0px;
+    border-radius: 10px;
+}
+.img img{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+input{
+    margin-left: 50px;
+}
+form{
+    margin-top: 70px;
+}
+#email ,#password{
+    width: 200%;
+}
+.logo{
+    padding-bottom: 15px;
+}
+.card-header{
+    text-align: center;
+}
+button{
+    margin-left: 55px;
+    color: #82CE2F;
+    border: none;
+}
+.form-check{
+    margin-left: 50px;
+}
+ .forgout{
+    margin-left: 36px;
+}
+.card{
+    margin-top: 110px;
+}*/

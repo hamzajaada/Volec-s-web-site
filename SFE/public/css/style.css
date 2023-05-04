@@ -12,7 +12,7 @@ h2{
 ul{
     display: flex;
     margin-top: 23px;
-   margin-left: 50px;
+   margin-left: 140px;
 }
 li{
     margin-right: 70px;
@@ -148,6 +148,7 @@ img{
     padding-left: 23px;
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     margin: 30px;
+    background-color: white;
 
 }
 .img-comp{
@@ -169,7 +170,7 @@ img{
 }
 .comp-text{
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 700;
     font-family: 'Cabin', sans-serif;
 }
@@ -178,6 +179,12 @@ img{
     text-align: center;
     font-family: 'Cabin', sans-serif;
     color: #82CE2F;
+}
+.text-ser{
+    margin-left: 50px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 .card2-serv{
     width: 300px;
@@ -379,4 +386,46 @@ span{
 margin-left: 181px;
 margin-top: 70px;
 font-size: 1.3em;
+}
+/**popup**/
+.card {
+    width: 1231px;
+    height: 482px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    margin-left: 750px;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+    opacity: 0;
+    top: -100%;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+}
+.card.open{
+    opacity: 1;
+    top: 50%;
+  }
+.hed{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 1220px;
+    border-bottom: 1px solid rgb(179, 178, 178);
+    align-items: center;
+}
+.text{
+
+    height: 370px;
+    width: 1220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+.text-pop{
+    margin-top: 80px;
+}
+.titre-comp-h4{
+    margin-left: 10px;
+    color:#82CE2F;
+    font-family: 'Cabin', sans-serif;
 }

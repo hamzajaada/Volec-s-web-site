@@ -40,16 +40,15 @@
             <img src="image/volec.png" alt="" srcset="">
             
             <ul>
-                <li><a href="" class="Faisons">Que faisons nous?</a></li>
-                <li><a href="" class="Services">Services</a> </li>
-                <li><a href="" class="Projets">Projets</a> </li>
-                <li><a href="" class="menu">Menu</a> </li>
-                <li><a href="" class="Contact">Contact</a> </li>
+                <li><a href="#QUE" class="Faisons">Que faisons nous?</a></li>
+                <li><a href="#SERV" class="Services">Services</a> </li>
+               
+                <li><a href="#COM" class="Contact">Nos Compètences</a> </li>
+                <li><a href="#CON" class="Contact">Contact</a> </li>
                 
             </ul>
-            <div class="link">
-                <div class="login"><a href="{{ route('login') }}" class="Link-login">Login</a></div>
-                <div class="Register"><a href="{{ route('register') }}" class="Link-register">Register</a></div>
+            <div class="polic-icone">
+                <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
             </div>
     </nav>
     <section class="P-1">
@@ -59,7 +58,8 @@
             </div>
            <div class="button-1"><a href="" class="view-more"> Voir plus .. </a></div>
     </section>
-    <section class="P-2">
+    <span id="QUE"></span>
+    <section  class="P-2">
       <u style="color: #82CE2F"><h1 class="titre-desc">Que faisons nous ?</h1></u> 
       <div class="desc">
         <p class="text-desc">La société VOLEC Pôle d'ingénierie et de service pour la construction, la rénovation, la main-
@@ -68,10 +68,12 @@
         respect des règles de sécurité, d'environnement et de développement durable.</p>  
     </div>
     </section>
+    <span id="COM"></span>
     <section class="P-3">
         <h1 class="P-3-titre">Nos Compètences </h1>
         <div class="main">
-            <div class="card1-comp">
+           
+                <div class="card1-comp">
                 <div class="img-comp">
                     <img src="image/consiel.png" alt="" srcset="">
                 </div>
@@ -79,8 +81,22 @@
                     <p class="comp-text">
                         Consiel 
                     </p>
+                     <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
+                    <div class="card" id="pup">
+                        <div class="hed">
+                            <h4 class="titre-comp-h4">Compètence</h4>
+                            <button style="border: 0; background-color:white" class="btn-close" onclick="hide_pup()"></button>
+                        </div>
+                        <div class="text">
+                            <p class="text-pop">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, eius cupiditate earum placeat a eveniet sint excepturi enim unde quam distinctio deserunt, porro accusamus aliquam minima itaque voluptatum. Beatae, sed!
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero delectus expedita corrupti, magni aliquid molestiae. Totam odit cumque, beatae animi molestias eligendi fuga pariatur ut sequi. Quos animi enim provident?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repellat, exercitationem aperiam, voluptates esse cum nesciunt laboriosam commodi sint possimus, debitis neque delectus ab iure praesentium iusto! Quae, voluptatem suscipit?
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        
 
             <div class="card1-comp">
                 <div class="img-comp">
@@ -90,6 +106,7 @@
                     <p class="comp-text">
                         Etudes préliminaires
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -101,6 +118,7 @@
                     <p class="comp-text">
                         Analyse fonctionnelle
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -112,6 +130,7 @@
                     <p class="comp-text">
                         Fournitures d'équipements
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -123,6 +142,7 @@
                     <p class="comp-text">
                         Fabrication
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -134,6 +154,7 @@
                     <p class="comp-text">
                         Assistance technique & formation
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -145,6 +166,7 @@
                     <p class="comp-text">
                         Maîtrise des arrêts
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
 
@@ -156,12 +178,20 @@
                     <p class="comp-text">
                         Essais & mise en service
                     </p>
+                    <button style="cursor: pointer; border:none; background-color:white;color:#82CE2F;font-size: 1.3em;"  class="btn-send fa-solid fa-angle-right" onclick="show_pup()"></button>
                 </div>
             </div>
         </div>
     </section>
+    <span id="SERV"></span>
+
     <section class="P-4">
         <h1 class="titre-P-4">Nos services</h1>
+        <p class="text-ser">Volec est une entreprise de renom dans le domaine de la construction, de la rénovation, de la maintenance et de l'innovation des procédés industriels. Avec une solide expérience et un savoir-faire inégalé, Volec est reconnue pour offrir des services de haute qualité à ses clients.
+
+            Que ce soit pour des projets de construction, de rénovation ou de maintenance, Volec s'engage à fournir des solutions innovantes, fiables et durables. L'entreprise dispose d'une équipe de professionnels qualifiés, qui mettent leur expertise à disposition pour répondre aux besoins spécifiques de chaque client.
+            
+            De plus, Volec est à la pointe de l'innovation dans les procédés industriels, en utilisant les technologies les plus avancées pour améliorer l'efficacité et la productivité des processus de production. Cette expertise dans l'innovation industrielle a permis à l'entreprise de se différencier de ses concurrents et de devenir un leader dans son secteur. ...</p>
             <div class="main">
                 <div class="card2-serv">
                     <div class="img-serv">
@@ -233,17 +263,19 @@
                         <i  class="fa-solid fa-circle-info"></i>
                     </div>
                 </div>
-
+ 
                 
 
             </div>
 
 
     </section>
+    <span id="CON"></span>
+
     <section class="P-5">
         <i id="icone" class="fa-solid fa-square-envelope"></i>
         <h1 class="titre-P-5">Contactez-nous dès maintenant pour découvrir comment nous pouvons vous aider à construire, rénover, maintenir et innover vos processus industriels pour assurer votre succès.</h1>
-        <div class="button-2"><a href="" class="contact-us"> Contactez-Nous </a></div> 
+        <div class="button-2"><a href="{{ route('contact') }}" class="contact-us"> Contactez-Nous </a></div> 
     </section>
 
     <section class="P-6">
@@ -310,6 +342,15 @@
             </div>
         </div>
     </section>
-<script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+
+<script>
+    function show_pup(){
+        console.log("hamza");
+        document.getElementById('pup').classList.add('open');
+    }
+    function hide_pup(){
+        document.getElementById('pup').classList.remove('open');
+    }
+  </script><script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

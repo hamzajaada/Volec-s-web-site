@@ -1,0 +1,74 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+   
+}
+h2{
+    font-family: 'Saira', sans-serif;
+    margin-top: 10px;
+}
+ul{
+    display: flex;
+    margin-top: 23px;
+   margin-left: 50px;
+}
+li{
+    margin-right: 70px;
+    list-style: none;
+}
+.Contact,.Faisons,.menu,.Services,.Projets{
+    text-decoration: none;
+    color: black;
+}
+.Contact:hover,.Faisons:hover,.menu:hover,.Services:hover,.Projets:hover{
+    
+    color: black;
+}
+.link{
+    display: flex;
+}
+.login,.Register{
+    margin-right: 10px;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-left: 8px;
+    margin-top: 5px;
+
+}
+.Register{
+background-color: #82CE2F;
+}
+.Link-register{
+    text-decoration: none;
+    color:white;
+}
+.Link-register:hover{
+    
+    color: white;
+}
+.Link-login{
+    text-decoration: none;
+    color: black;
+}
+.Link-login:hover{
+    
+    color: black;
+}
+.Link-login{
+    margin-left: 6px;
+}
+img{
+    width: 100px;
+    height: 40px;
+}
+.police-link{
+    color: #82CE2F;
+    font-size: 1.9em;
+}
+.police-link:hover{
+    color: black;
+}

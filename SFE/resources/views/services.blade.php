@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store of skills</title>
     {{-- LINK CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/pageprincipale.css') }}">
+    <link rel="stylesheet" href="css/services.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,19 +36,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Cabin:wght@500&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Murecho:wght@500&family=Open+Sans&family=Oswald&family=Outfit:wght@100&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Public+Sans:wght@600&family=Questrial&family=Quicksand&family=Roboto+Condensed&family=Roboto+Flex:opsz,wght@8..144,500&family=Rowdies:wght@700&family=Rubik:wght@500&family=Saira:wght@200&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet"></head>
 </head>
 <body>
-   
-    <section class="F1">
-        @extends('admin.barre')
-        <div class="Sec-1">
-            <div class="imageVolec"> 
-                <img src="../image/admin.png" alt="">
-                <p class="text-volec">La société VOLEC Pôle d'ingénierie et de service pour la construction, la rénovation, la main- tenance et l'innovation des procédés industriels. Forts de la diversité de nos expériences et de notre expertise, nous vous proposons une large gamme de prestation dans le plus grand respect des règles de sécurité, d'environnement et de développement durable.</p>
+    <nav style="position: fixed;width: 100%;height:7%;top:0; z-index: 999;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container">
+            <img src="image/volec.png" alt="" srcset="">
+            
+            <ul>
+                <li><a href="" class="Faisons">Que faisons nous?</a></li>
+                <li><a href="" class="Services">Services</a> </li>
+               
+                <li><a href="" class="Contact">Contact</a> </li>
+                
+            </ul>
+            <div class="polic-icone">
+                <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
             </div>
-        </div>
-    </section>
-    
+    </nav>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
-   
+
 </body>
 </html>
-@endsection
