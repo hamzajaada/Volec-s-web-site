@@ -28,4 +28,13 @@ class CompetenceController extends Controller
     
         return redirect()->route('home-admin')->with('success', 'Votre service a été créée avec succès.');
     }
+    public function vue(){
+        return view('admin.ajoute-competence');
+    }
+
+    public function show_competence()
+    {
+        $comptences = Competence::all();
+        return view('welcome', compact('comptences'));   
+     }
 }

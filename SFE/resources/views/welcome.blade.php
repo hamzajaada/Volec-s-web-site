@@ -23,7 +23,7 @@
     <title>Store of skills</title>
     {{-- LINK CSS --}}
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,22 @@
                 <div class="logo-part1"><img src="image/volec.png" alt="" srcset=""></div>
                 <h2 id="text-part1">Solutions <span style="color:#82CE2F">&</span>  Services en Electrotechnique, Electronique de puissance, Automatisme et Régulation lndustrielle.</h2>
             </div>
-           <div class="button-1"><a href="" class="view-more"> Voir plus .. </a></div>
+           <div class="statistique">
+            <div class="nb-client">
+                <p style="color: #82ce2f; font-size:50px">+70</p>
+                <p>CLIENTS SATISFAITS</p>
+
+            </div>
+            <div class="chiffre">
+                <p style="color: #82ce2f; font-size:50px" >+50M€</p>
+                <p>UN CHIFFRE EN CROISSANCE</p>
+
+            </div>
+            <div class="annee-ex">
+                <p style="color: #82ce2f; font-size:50px" >+22</p>
+                <p>ANNÉES D’EXPÉRIENCE</p>
+            </div>
+           </div>
     </section>
     <span id="QUE"></span>
     <section  class="P-2">
@@ -65,8 +80,34 @@
         <p class="text-desc">La société VOLEC Pôle d'ingénierie et de service pour la construction, la rénovation, la main-
         tenance et l'innovation des procédés industriels. Forts de la diversité de nos expériences et de
         notre expertise, nous vous proposons une large gamme de prestation dans le plus grand
-        respect des règles de sécurité, d'environnement et de développement durable.</p>  
+        respect des règles de sécurité, d'environnement et de développement durable. Réaliser un projet est un exercice complexe. le choix optimal des équipements, l’intégration efficace des systèmes, l’optimisation du rendement de votre investissement, ainsi que le respect des contraintes économiques et environnementales.
+        c’est notre challenge !
+    </p>  
     </div>
+    </section>
+    <section class="P-1-1">
+        <div class="diapo">
+            <!-- Conteneur des "diapos" -->
+            <div class="elements">
+                <!-- Première diapo -->
+                @foreach ($actualites as $actualite )
+                    <div class="element active">
+                    <img class="img" src="{{ asset('image/Actualite/'.$actualite->image) }}" alt="Image 1">
+                    <div class="caption">
+                        
+                        <p class="p-diapo">
+                            {{ $actualite ->description }}</p>
+                    </div>
+                </div> 
+                
+                @endforeach
+         
+                     
+        </div>
+        <!-- Flèches de navigation -->
+                     <i id="nav-gauche" class="fa-solid fa-chevron-left"></i>
+                     <i id="nav-droite" class="fa-solid fa-chevron-right"></i>
+        </div>
     </section>
     <span id="COM"></span>
     <section class="P-3">
@@ -342,15 +383,7 @@
             </div>
         </div>
     </section>
-
-<script>
-    function show_pup(){
-        console.log("hamza");
-        document.getElementById('pup').classList.add('open');
-    }
-    function hide_pup(){
-        document.getElementById('pup').classList.remove('open');
-    }
-  </script><script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+<script src="js/diaporama.js"></script>
+<script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

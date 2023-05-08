@@ -28,14 +28,14 @@ Route::get('/admin/home', function () { return view('admin.page-principale'); })
 Route::get('/admin/barre', function () { return view('admin.barre'); })->name('barre-admin');
 
 Route::get('/admin/ajoutserv', function () { return view('admin.ajoute-service'); })->name('ajouteserv-admin');
-Route::get('/admin/ajoutcat', function () { return view('admin.ajoute-categorie'); })->name('ajoutecat-admin');
-Route::get('/admin/ajoutcomp', function () { return view('admin.ajoute-competence'); })->name('ajoutecomp-admin');
+Route::get('/admin/ajoutcat', function () { return view('admin.ajoute-actualite'); })->name('ajouteact-admin');
 Route::get('login', function () { return view('login'); })->name('login');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/ajouter-categorie', [App\Http\Controllers\CategorieController::class, 'ajouterCategorie'])->name('categorie.ajouter');
-
 Route::get('/admin/ajoutcomp', function () { return view('admin.ajoute-competence'); })->name('ajoutecomp-admin');
 Route::post('/ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'ajouterComptence'])->name('comptence.ajouter');
+Route::get('/view-ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'vue'])->name('view-comptence.ajouter');
+
+Route::post('/ajouter-actualite', [App\Http\Controllers\ActualiteController::class, 'ajouterActualite'])->name('Actualite.ajouter');
+
+Route::get('/', [App\Http\Controllers\ActualiteController::class, 'index1'])->name('actualites.index');

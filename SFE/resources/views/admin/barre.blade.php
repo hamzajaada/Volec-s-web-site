@@ -20,7 +20,7 @@
         <div class="links">
             <ul class="nav-list">
                 <li>
-                    <a href="{{ route('/') }}">
+                    <a href="{{ url('/') }}">
                 
                     <i class="fa fa-home"></i>
                     <span class="links_name">Accueil</span>
@@ -44,6 +44,15 @@
                     </a>
                     <span style="color:black" class="tooltip">Demandes</span>
                 </li>
+
+                <li>
+                    <a href="">
+                         
+                        <i class="fa-regular fa-newspaper"></i>
+                        <span class="links_name">Actualité</span>
+                    </a>
+                    <span style="color:black" class="tooltip">Actualité</span>
+                </li>
                 
                     <li>
                         <a href="{{ route('ajouteserv-admin') }}">
@@ -51,23 +60,23 @@
                             <i class="fa fa-plus"></i>
                             <span class="links_name"> Service</span>
                         </a>
-                        <span  style="color:black"class="tooltip">Service</span>
+                        <span  style="color:black"class="tooltip">  Ajouter Service</span>
                     </li>
                     <li>
-                        <a href="{{ route('ajoutecat-admin') }}">
+                        <a href="{{ route('ajouteact-admin') }}">
                             
                             <i class="fa fa-plus"></i>
-                            <span class="links_name">Catégorie de services </span>
+                            <span class="links_name">Actualité </span>
                         </a>
-                        <span  style="color:black"class="tooltip">Catégorie de services </span>
+                        <span  style="color:black"class="tooltip">  Ajouter Actualité </span>
                     </li>
                     <li>
-                        <a href="{{ route('ajoutecomp-admin') }}">
+                        <a href="{{ route('view-comptence.ajouter') }}">
                             
                             <i class="fa fa-plus"></i>
                             <span class="links_name"> Compétence</span>
                         </a>
-                        <span  style="color:black"class="tooltip">Compétence</span>
+                        <span  style="color:black"class="tooltip">  Ajouter Compétence</span>
                     </li>
                     
                
