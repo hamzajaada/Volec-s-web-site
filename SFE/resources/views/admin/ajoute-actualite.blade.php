@@ -22,22 +22,9 @@
 
 </head>
 <body>
-<div id="app">
-    <nav style="position: fixed;width: 100%;height:7%;top:0; z-index: 999;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <img src="../image/volec.png" alt="" srcset="">
-            
-            <ul class="ul">
-                <li class="li"><a href="" class="Faisons">Que faisons nous?</a></li>
-                <li class="li" ><a href="" class="Services">Services</a> </li>
-               
-                <li class="li"><a href="" class="Contact">Contact</a> </li>
-                
-            </ul>
-            <div class="polic-icone">
-                <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
-            </div>
-    </nav> 
+    @extends('layouts.app')
+
+    @section('content') 
     <section class="services-p">
         <section class="main-sec1">
             @extends('admin.Barre')

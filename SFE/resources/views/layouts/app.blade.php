@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="position: fixed; width:100%;">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="position: fixed; width:100%; top:0">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                   <span style="color: #82cf26">V</span>olec

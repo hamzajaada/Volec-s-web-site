@@ -46,7 +46,7 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="{{ route('show-actualite-admin') }}">
                          
                         <i class="fa-regular fa-newspaper"></i>
                         <span class="links_name">Actualité</span>

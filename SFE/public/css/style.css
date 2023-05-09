@@ -114,7 +114,7 @@ img{
 .titre-desc{
     text-align: center;
     font-family: 'Cabin', sans-serif;
-    margin-top: 60px;
+    margin-top: 100px;
     margin-left: 220px;
 }
 .desc{
@@ -127,7 +127,7 @@ img{
     font-size: 1.3em;
 }
 .P-3-titre{
-    margin-top: 10px;
+    margin-top: -172px;
     text-align: center;
     font-family: 'Cabin', sans-serif;
     color: #82CE2F;
@@ -234,7 +234,7 @@ i{
     margin-top: 20px;
     width: 100%;
     height: 400px;
-    background-color: #82CE2F;
+    background-color: #daddd6;
     margin-bottom: 70px;
 }
 .titre-P-5{
@@ -276,8 +276,12 @@ i{
     margin-bottom: 20px;
 }
 .P-6{
+    padding-top: 37px;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-color: #eef3ef;
+    padding-bottom: 30px;
+    height: 700px;
 }
 .mini-titre-P-6{
     text-align: center;
@@ -290,30 +294,61 @@ i{
    margin-top: 30px;
    display: flex;
    justify-content: space-around;
+   
 }
 
+.content{
+    width: 460px;
+    height: 300px;
+    padding-left: 41px;
+    padding-right: 1px;
+}
 
+.iconAv{
+    text-align: center;
+}
+.iconAv i{
+    margin-left: 7px;
+    margin-top: 55px;
+    font-size: 4em;
+    color: #82CE2F;
+}
+.iconAv img{
+    margin-left: 7px;
+    margin-top: 55px;
+    width: 150px;
+    color: orange;
+    height: 150px;
+}
+.decrir{
+    color:#2fd48a;
+    font-size: 3em;
+    font-weight: 1000;
+    text-align: center;
+}
 .not1{
-      width: 360px;
-      height: 300px;
+      width: 460px;
+      height: 470px;
+      border-radius: 7px;
+      box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+      background-color: white;
 
-      border-right: 0.3px solid #a09f9f;
 }
 .not2{
-   width: 360px;
-   height: 300px;
-   border-right: 0.3px solid #a09f9f;
+   width: 460px;
+   height: 511px;
+   box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+   border-radius: 7px;
+   background-color: white;
 }
-.not3{
-   width: 360px;
-   height: 300px;
 
-   border-right: 0.3px solid #a09f9f;
-}
 .not4{
-    width: 360px;
-    height: 300px;
- 
+    width: 460px;
+    height: 470px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    border-radius: 7px;
+    background-color: white;
+
 }
 .titre-not1 ,.titre-not2 ,.titre-not3{
    text-align: center;
@@ -334,7 +369,7 @@ span{
     margin-top: 20px;
     width: 100%;
     height: 400px;
-    background-color:black;
+    background-color:rgb(79, 79, 79);
     display: flex;
     bottom: 0;
 
@@ -371,7 +406,7 @@ span{
 .lien{
   display: flex;
   width: 100%;
- 
+  margin-left: 11px;
   margin-top: 100px;
 }
 #fb,#insta,#linkd{
@@ -431,10 +466,10 @@ font-size: 1.3em;
 }
 .P-1-1{
 
-        width: 80%;
+       /* width: 80%;*/
         margin: auto;
         height: 100%;
-        margin-left: 185px;
+        /*margin-left: 185px;*/
     
 }
 .diapo{
@@ -474,7 +509,7 @@ font-size: 1.3em;
 .element > .img{
     width: 100%;
     height: 80%;
-    border-radius: 15px;
+   
 }
 
 .caption{

@@ -324,32 +324,32 @@
         <h1 class="titre-P-6">Principales raisons pour lesquelles vous devriez nous choisir !</h1>
             <div class="notif">
                 <div class="not1">
-                    <h1 class="titre-not1"> <span>1-  </span>  CONNAISSANCE</h1>
-                    <p class="text-not">
-                        La connaissance institutionnelle est la capacité d’agir, est la somme de 
-                        l’intelligence d’entreprise, de l’éducation et des expériences
-                    </p>
+                    <h1 class="iconAv"><img src="https://em-energie.com/wp-content/uploads/2019/04/Quality-icon-e1558601150809.png.webp" alt="" srcset=""></h1>
+                    <h2 style="color: orange" class="decrir">INTÉGRITÉ</h2>
+                    <div style="padding-right: 29px" class="content">
+                   <p class="text-not">
+                    Une culture fondée sur l’intégrité est essentielle à la concrétisation de nos aspirations stratégiques pour instaurer un environnement professionnel dans lequel nous pouvons tous être fiers de ce que nous faisons.
+                   </p>
+               </div>
                 </div>
                 <div class="not2">
-                    <h1 class="titre-not2"><span>2- </span> INNOVATION</h1>
-                    <p class="text-not">
-                        Comme nous continuons à appliquer parfaitement les solutions existantes à plusieurs reprises et, 
-                        nous adaptons toujours les dernières technologies du monde aux solutions optimales.
-                    </p>
+                    <h1 class="iconAv"><img src="https://em-energie.com/wp-content/uploads/2019/04/Security-icon-e1558601176442.png.webp" alt="" srcset=""></h1>
+                    <h2 class="decrir">SÉCURITÉ</h2>
+                    <div class="content">
+                   <p class="text-not">
+                       La sécurité de nos clients et de nos équipes est capitale. Nous veillons à éviter tous les risques et incidents pendant la réalisation et l'exploitation.
+                   </p>
+               </div>
                 </div>
-                <div class="not3">
-                    <h1 class="titre-not3"><span>3- </span> RESPECT</h1>
-                    <p class="text-not">
-                        Nous respectons nos clients et aussi leurs clients
-                    </p>
-             
-                </div>
+              
                 <div class="not4">
-                    <h1 class="titre-not3"><span>4- </span> CONFIDENCE & TRUST</h1>
-                    <p class="text-not">
-                        Nos clients font confiance à notre organisation pour la qualité, la fiabilité et l’honnêteté; 
-                        parce qu’ils savent que nous ne ferons aucun compromis sur l’éthique professionnelle afin de gagner aujourd’hui.
-                    </p>
+                    <h1 class="iconAv"><img src="https://em-energie.com/wp-content/uploads/2019/04/Satisfaction-icon-e1558601189813.png.webp"></h1>
+                    <h2 style="color: rgb(136, 0, 255)" class="decrir">INNOVATION</h2>
+                    <div style="padding-right: 29px" class="content">
+                   <p class="text-not">
+                    Nous pensons que nos capacités à innover ainsi qu'à cultiver une réflexion constituent un véritable moteur de croissance, de réussite et de progression.
+                   </p>
+               </div>
                 </div>
             </div>
             
