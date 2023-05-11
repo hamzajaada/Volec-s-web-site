@@ -28,4 +28,6 @@ class ServiceController extends Controller
     
         return redirect()->route('home1')->with('success', 'Votre service a été créée avec succès.');
     }
+ 
+
 }

@@ -51,7 +51,7 @@
 
                   <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
                     @foreach ( $secteurs as $secteur)
-                      <a class="dropdown-item" href="">{{ $secteur->categorie }}</a>
+                      <a class="dropdown-item" href="{{ route('view-service' ,$secteur->categorie) }}">{{ $secteur->categorie }}</a>
                     @endforeach
                       
                       
@@ -145,7 +145,7 @@
                       <p class="serv-text">
                         {{ $secteur->categorie }}
                       </p>
-                      <u style="color: #82CE2F"><a href="{{ route('viewSER') }}" class="detail">Détail ...</a></u> 
+                      <u style="color: #82CE2F"><a href="{{ route('view-service' ,$secteur->categorie) }}" class="detail">Détail ...</a></u> 
                     </div>
                   </div>
                   @endforeach

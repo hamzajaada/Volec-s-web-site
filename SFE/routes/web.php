@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Models\Actualite;
 use App\Models\Competence;
 use App\Models\Secteur;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,15 @@ Route::put('/secteurs/modifier/page/{id}',[App\Http\Controllers\SecteurControlle
 //affiche secteurs dans form ajoute service :
 Route::get('/view-ajouter-service', [App\Http\Controllers\SecteurController::class, 'show_sercteurs1'])->name('view-service.ajouter');
 Route::post('/ajouter-service', [App\Http\Controllers\ServiceController::class, 'ajouterService'])->name('service.ajouter');
-route::get('/services', function(){
-    return view('services');
-})->name('viewSER');
+
+Route::get('/showservice/{categorie}', 
+  function($categorie){
+    $services = Service::where('categorie', $categorie )->get();
+    $secteurs = Secteur::all();
+    $categories = $categorie;
+    return view('services',compact('services','secteurs','categories'));
+  }
+)->name('view-service');
+
+//rote qui affiche les secteurs dans services:
+

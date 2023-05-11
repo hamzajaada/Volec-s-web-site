@@ -40,6 +40,7 @@ class SecteurController extends Controller
             $secteurs = Secteur::all();
             return view('admin.ajoute-service', compact('secteurs'));
         }
+       
 
        public function destroy($id)
        {
@@ -75,4 +76,5 @@ class SecteurController extends Controller
            return redirect()->route('show-secteur-admin')->with('success', 'Votre actualite a été modifiée avec succès.');
 
        }
+       
 }

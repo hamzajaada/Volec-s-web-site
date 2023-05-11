@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store of skills</title>
     {{-- LINK CSS --}}
-    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="{{ asset('css/services.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
 <body>
     <nav style="position: fixed;width: 100%;height:7%;top:0; z-index: 999;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <img src="image/volec.png" alt="" srcset="">
+            <img src="../image/volec.png" alt="" srcset="">
             
             <ul>
                 <li><a href="#QUE" class="Faisons">Que faisons nous?</a></li>
@@ -50,7 +50,9 @@
 
                   <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
                
-                      <a class="dropdown-item" href=""></a>
+                    @foreach ( $secteurs as $secteur)
+                    <a class="dropdown-item" href="{{ route('view-service' ,$secteur->categorie) }}">{{ $secteur->categorie }}</a>
+                     @endforeach
                  
                       
                       
@@ -69,7 +71,7 @@
     </nav>
 <section class="P1">
     <div class="titreP">
-        <h1 class="titre-P1">Solution d'Equipement MT</h1>
+               <h1 class="titre-P1">{{ $categories }}</h1>
     </div>
     
 
@@ -77,57 +79,27 @@
 <div class="main">
         <div class="m1">
             <h2 class="t-m1">Nos Service par Secteur</h2>
-            
-            <a href="" class="m1-link">Solutions Antidéflagrante</a>
+            @foreach ( $secteurs as $secteur )  
+            <a href="{{ route('view-service',$secteur->categorie) }}" class="m1-link">{{ $secteur->categorie }}</a>
             <div class="str1"></div>
-            <a href="" class="m1-link">Solutions d'Automatisation</a>
-            <div class="str1"></div>
-            <a href="" class="m1-link">Solutions d'Eclairage</a>
-            <div class="str1"></div>
-            <a href="" class="m1-link">Solutions d'Equipement BT</a>
-            <div class="str1"></div>
+        @endforeach
         </div>
         <div class="m2">
+            @foreach ( $services as $service )
+                
+            
            <div class="card">
             <div class="img-card">
-                <img src="image/anti.jpg" alt="" srcset="">
+                <img src="{{ asset('image/Servic/'.$service->image) }}" alt="" srcset="">
             </div>
             <div class="talks">
-                <p class="talks-p">Transformateurs de puissance</p>
+                <p class="talks-p">{{ $service->nom_service }}</p>
                 <div class="str"></div>
                 <a href="" class="talks-a">Détail ...</a>
             </div>
            </div>
-           <div class="card">
-            <div class="img-card">
-                <img src="image/anti.jpg" alt="" srcset="">
-            </div>
-            <div class="talks">
-                <p class="talks-p">Transformateurs de puissance</p>
-                <div class="str"></div>
-                <a href="" class="talks-a">Détail ...</a>
-            </div>
-           </div>
-           <div class="card">
-            <div class="img-card">
-                <img src="image/anti.jpg" alt="" srcset="">
-            </div>
-            <div class="talks">
-                <p class="talks-p">Transformateurs de puissance</p>
-                <div class="str"></div>
-                <a href="" class="talks-a">Détail ...</a>
-            </div>
-           </div>
-           <div class="card">
-            <div class="img-card">
-                <img src="image/anti.jpg" alt="" srcset="">
-            </div>
-            <div class="talks">
-                <p class="talks-p">Transformateurs de puissance</p>
-                <div class="str"></div>
-                <a href="" class="talks-a">Détail ...</a>
-            </div>
-           </div>
+           @endforeach
+        
 
         </div>
     </div>
