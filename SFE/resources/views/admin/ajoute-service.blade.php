@@ -32,29 +32,25 @@
         <section class="AF"  >
             <h1 class="titre-Ajouteoffre">Ajouter un <span >service</span></h1>
             <div class="info-compte">
-                <form class="row g-3" method="post" action="" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('service.ajouter') }}" enctype="multipart/form-data">
                     @csrf
                     
                     <div class="form-group2">
                         <label for="exampleFormControlSelect1">Catégorie:</label><br>
                         <select class="form-select" aria-label="Default select example"  name="categorie" id="exampleFormControlSelect1">
-                            <option value="Design graphique">Solutions d'Equipement MT</option>
-                            <option value="Développement web et mobile">Solutions d'Equipement BT</option>
-                            <option value="Rédaction et traduction">Solutions d'Automatisation</option>
-                            <option value="Marketing et publicité">Solutions du Courant Faible</option>
-                            <option value="Services informatiques">Solutions d'Eclairage</option>
-                            <option value="Coaching et formation">Solutions Antidéflagrante</option>
-                            
+                            @foreach ( $secteurs as $secteur )
+                                  <option value="{{ $secteur->categorie }}">{{ $secteur->categorie }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group2" >
                         <label for="exampleFormControlTextarea1">Nom de service:</label>
-                        <input class="form-control" type="text"  aria-label="default input example">
+                        <input class="form-control" type="text" name="nom_service"  aria-label="default input example">
 
                     </div>
                     <div class="form-group2" >
                         <label for="exampleFormControlTextarea1">description:</label>
-                        <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-12">
                         <label for="inputImage" class="form-label">Image de service</label>

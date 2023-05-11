@@ -43,7 +43,21 @@
             
             <ul>
                 <li><a href="#QUE" class="Faisons">Que faisons nous?</a></li>
-                <li><a href="#SERV" class="Services">Secteur d'activité</a> </li>
+             
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    Secteur d'activité
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
+                    @foreach ( $secteurs as $secteur)
+                      <a class="dropdown-item" href="">{{ $secteur->categorie }}</a>
+                    @endforeach
+                      
+                      
+
+                  </div>
+              </li>
                 <li><a href="#SERV" class="Nos-références">Nos références</a> </li>
                 <li><a href="#SERV" class="Nos-Client">Nos Client</a> </li>
                 <li><a href="#CON" class="Contact">Contact</a> </li>
@@ -78,7 +92,7 @@
         </div>
     </section>
     <section class="P-1">
-           <h1 class="titre-statis">Nos statistique</h1>
+           <h1 class="titre-statis">Nos statistiques</h1>
            <div class="statistique">
            
             <div class="nb-client">
@@ -122,138 +136,19 @@
             De plus, Volec est à la pointe de l'innovation dans les procédés industriels, en utilisant les technologies les plus avancées pour améliorer l'efficacité et la productivité des processus de production. Cette expertise dans l'innovation industrielle a permis à l'entreprise de se différencier de ses concurrents et de devenir un leader dans son secteur. ...</p>-->
             <div class="main">
                 <div class="card2-serv-wrapper">
+                  @foreach ( $secteurs as $secteur)
                   <div class="card2-serv">
                     <div class="img-serv">
-                      <img src="image/MT.jpg" alt="" srcset="">
+                      <img src="{{ asset('image/Secteur/'.$secteur->image) }}" alt="" srcset="">
                     </div>
                     <div class="des-serv">
                       <p class="serv-text">
-                        Solutions d'Equipement MT
+                        {{ $secteur->categorie }}
                       </p>
-                      <i class="fa-solid fa-circle-info"></i>
+                      <u style="color: #82CE2F"><a href="{{ route('viewSER') }}" class="detail">Détail ...</a></u> 
                     </div>
                   </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/bt.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions d'Equipement BT
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/automatisation.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions d'Automatisation
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/faible.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions du Courant Faible
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/eclair.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions d'Eclairage
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
-                  <div class="card2-serv">
-                    <div class="img-serv">
-                      <img src="image/anti.jpg" alt="" srcset="">
-                    </div>
-                    <div class="des-serv">
-                      <p class="serv-text">
-                        Solutions Antidéflagrante
-                      </p>
-                      <i class="fa-solid fa-circle-info"></i>
-                    </div>
-                  </div>
+                  @endforeach
                 </div>
               </div>
    

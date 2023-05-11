@@ -45,7 +45,7 @@ class ActualiteController extends Controller
             $Act = Actualite::findorFail($id);
             $Act->delete();
             return redirect()->back()->with('success', 'Votre offre a été supprimer avec succès.');
-        }
+        } 
         public function edit($id)
         {
             $actualite = Actualite::findOrFail($id);

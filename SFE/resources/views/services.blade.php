@@ -41,17 +41,99 @@
             <img src="image/volec.png" alt="" srcset="">
             
             <ul>
-                <li><a href="" class="Faisons">Que faisons nous?</a></li>
-                <li><a href="" class="Services">Services</a> </li>
+                <li><a href="#QUE" class="Faisons">Que faisons nous?</a></li>
+             
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    Secteur d'activité
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
                
-                <li><a href="" class="Contact">Contact</a> </li>
+                      <a class="dropdown-item" href=""></a>
+                 
+                      
+                      
+
+                  </div>
+              </li>
+                <li><a href="#SERV" class="Nos-références">Nos références</a> </li>
+                <li><a href="#SERV" class="Nos-Client">Nos Client</a> </li>
+                <li><a href="#CON" class="Contact">Contact</a> </li>
                 
+            </ul>
             </ul>
             <div class="polic-icone">
                 <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
             </div>
     </nav>
-    <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+<section class="P1">
+    <div class="titreP">
+        <h1 class="titre-P1">Solution d'Equipement MT</h1>
+    </div>
+    
 
+</section>
+<div class="main">
+        <div class="m1">
+            <h2 class="t-m1">Nos Service par Secteur</h2>
+            
+            <a href="" class="m1-link">Solutions Antidéflagrante</a>
+            <div class="str1"></div>
+            <a href="" class="m1-link">Solutions d'Automatisation</a>
+            <div class="str1"></div>
+            <a href="" class="m1-link">Solutions d'Eclairage</a>
+            <div class="str1"></div>
+            <a href="" class="m1-link">Solutions d'Equipement BT</a>
+            <div class="str1"></div>
+        </div>
+        <div class="m2">
+           <div class="card">
+            <div class="img-card">
+                <img src="image/anti.jpg" alt="" srcset="">
+            </div>
+            <div class="talks">
+                <p class="talks-p">Transformateurs de puissance</p>
+                <div class="str"></div>
+                <a href="" class="talks-a">Détail ...</a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="img-card">
+                <img src="image/anti.jpg" alt="" srcset="">
+            </div>
+            <div class="talks">
+                <p class="talks-p">Transformateurs de puissance</p>
+                <div class="str"></div>
+                <a href="" class="talks-a">Détail ...</a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="img-card">
+                <img src="image/anti.jpg" alt="" srcset="">
+            </div>
+            <div class="talks">
+                <p class="talks-p">Transformateurs de puissance</p>
+                <div class="str"></div>
+                <a href="" class="talks-a">Détail ...</a>
+            </div>
+           </div>
+           <div class="card">
+            <div class="img-card">
+                <img src="image/anti.jpg" alt="" srcset="">
+            </div>
+            <div class="talks">
+                <p class="talks-p">Transformateurs de puissance</p>
+                <div class="str"></div>
+                <a href="" class="talks-a">Détail ...</a>
+            </div>
+           </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

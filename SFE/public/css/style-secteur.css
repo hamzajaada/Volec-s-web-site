@@ -1,0 +1,63 @@
+.AF{
+    margin-left: 300px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-act{
+    margin: 10px;
+    width: 399px;
+    height: 512px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.picture{
+    width: 400px;
+    height: 350px;
+
+    
+}
+.picture img{
+    width: 400px;
+    height: 350px;
+    border-radius: 10px 10px 0px 0px;
+   
+}
+
+
+.btn-mp{
+    width: 400px;
+    height: 62px;
+    border: 1px solid rgb(214, 210, 210);
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0px 0px 10px 10px;
+}
+.caption{
+   width: 400px;
+   height: 100px;
+   border: 1px solid  rgb(214, 209, 209);
+   border-bottom: none;
+   overflow: auto; /* ou overflow: scroll; */
+}
+.p-diapo{
+    color:black;
+   
+    font-weight: 400;
+ 
+}
+.ope{
+    text-decoration: none;
+}
+.ope:hover{
+    color: azure;
+}
+
+i{
+    font-size: 2em;
+    font-weight: 400;
+}

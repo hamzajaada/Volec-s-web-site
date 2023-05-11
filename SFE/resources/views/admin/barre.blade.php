@@ -53,9 +53,17 @@
                     </a>
                     <span style="color:black" class="tooltip">Actualité</span>
                 </li>
+                <li>
+                    <a href="{{ route('show-secteur-admin') }}">
+                         
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="links_name">Secteur d'activité</span>
+                    </a>
+                    <span style="color:black" class="tooltip">Secteur d'activité</span>
+                </li>
                 
                     <li>
-                        <a href="{{ route('ajouteserv-admin') }}">
+                        <a href="{{ route('view-service.ajouter') }}">
                             
                             <i class="fa fa-plus"></i>
                             <span class="links_name"> Service</span>
@@ -69,6 +77,14 @@
                             <span class="links_name">Actualité </span>
                         </a>
                         <span  style="color:black"class="tooltip">  Ajouter Actualité </span>
+                    </li>
+                    <li>
+                        <a href="{{ route('view-secteur.ajouter') }}">
+                            
+                            <i class="fa fa-plus"></i>
+                            <span class="links_name"> Secteur d'activite </span>
+                        </a>
+                        <span  style="color:black"class="tooltip"> Ajouter Secteur d'activite </span>
                     </li>
                     <li>
                         <a href="{{ route('view-comptence.ajouter') }}">
