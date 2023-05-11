@@ -26,15 +26,10 @@ class CompetenceController extends Controller
         $comptence->image = $imageName;
         $comptence->save();
     
-        return redirect()->route('home-admin')->with('success', 'Votre service a été créée avec succès.');
+        return redirect()->route('home1')->with('success', 'Votre service a été créée avec succès.');
     }
     public function vue(){
         return view('admin.ajoute-competence');
     }
-
-    public function show_competence()
-    {
-        $comptences = Competence::all();
-        return view('welcome', compact('comptences'));   
-     }
+    
 }

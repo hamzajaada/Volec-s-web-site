@@ -92,3 +92,87 @@ function stopTimer(){
 function startTimer(){
     timer = setInterval(slideNext, 3000)
 }
+$(document).ready(function() {
+    var main = $(".main");
+    var scrollWidth = main[0].scrollWidth;
+    var viewportWidth = main.innerWidth();
+    var scrollPosition = 0;
+    var scrollDirection = 1;
+  
+    // Ajout des boutons de scrolling
+    $('.scroll-left').click(function() {
+      scrollPosition -= viewportWidth / 8;
+      if (scrollPosition < 0) {
+        scrollPosition = 0;
+      }
+      $(".main").animate({
+        scrollLeft: scrollPosition
+      }, 500);
+    });
+  
+    $('.scroll-right').click(function() {
+      scrollPosition += viewportWidth / 8;
+      if (scrollPosition > scrollWidth - viewportWidth) {
+        scrollPosition = scrollWidth - viewportWidth;
+      }
+      $(".main").animate({
+        scrollLeft: scrollPosition
+      }, 500);
+    });
+  
+    // Défilement automatique
+    setInterval(function() {
+      scrollPosition += scrollDirection * (viewportWidth );
+      if (scrollPosition > scrollWidth - viewportWidth || scrollPosition < 0) {
+        scrollDirection *= -1;
+      }
+      $(".main").animate({
+        scrollLeft: scrollPosition
+      }, 1000);
+    }, 9000);
+  });
+  //project//
+  
+  function slidesPlugin(activeSlide = 0) {
+    const slides = document.querySelectorAll('.slide');
+
+    makeSlideActive( slides[activeSlide] );
+
+    slides.forEach(slide => {
+        slide.addEventListener('click', (event) => {
+            clearActiveSlide();
+            makeSlideActive(event.target);
+            
+        });
+    })
+
+    function clearActiveSlide() {
+        for (const slide of slides) {
+            if ( isSlideActive(slide) ) {
+                makeSlidePassive(slide);
+                break;
+            }
+        }
+    }
+
+    function isSlideActive(el) {
+        return el.classList.contains('active');
+    }
+
+    function makeSlideActive(el) {
+        el.classList.add('active');
+    }
+
+    function makeSlidePassive(el) {
+        el.classList.remove('active');
+    }
+}
+
+slidesPlugin(2);
+
+
+
+
+
+
+  

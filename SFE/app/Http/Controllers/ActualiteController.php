@@ -28,7 +28,7 @@ class ActualiteController extends Controller
         $actualite->image = $imageName;
         $actualite->save();
     
-        return redirect()->route('actualites.index')->with('success', 'Votre actualite a été créée avec succès.');
+        return redirect()->route('home1')->with('success', 'Votre actualite a été créée avec succès.');
     }
     public function index1()
     {
@@ -68,7 +68,7 @@ class ActualiteController extends Controller
             $request->image->move(public_path('image/Actualite'), $imageName);
             $actualite->image = $imageName;
              }
-
+ 
             $actualite->save();
 
             return redirect()->route('show-actualite-admin')->with('success', 'Votre actualite a été modifiée avec succès.');
