@@ -35,6 +35,11 @@
                 <form class="row g-3" method="post" action="{{ route('actualites.modifier-ex',$actualite->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+                    <div class="form-group2" >
+                        <label for="exampleFormControlTextarea1">Titre d'actualité:</label>
+                        <input class="form-control"  value="{{$actualite->titre}}" type="text" name="titre"  aria-label="default input example">
+
+                    </div>
                     <div class="form-group2">
                         <label for="exampleFormControlTextarea1">description:</label>
                         <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{ $actualite->description}}</textarea>

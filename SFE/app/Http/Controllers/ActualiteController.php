@@ -17,6 +17,7 @@ class ActualiteController extends Controller
         $validated = $request->validate([
            
             'description' => 'required|max:255',
+            'titre' => 'required|max:255',
           
         ]);
           //enregistrement de l'image
@@ -25,6 +26,7 @@ class ActualiteController extends Controller
         //création de l'acctualite
         $actualite = new Actualite();
         $actualite->description = $request->description;
+        $actualite->titre = $request->titre;
         $actualite->image = $imageName;
         $actualite->save();
     
@@ -56,12 +58,13 @@ class ActualiteController extends Controller
           //validation des inputs
              $validated = $request->validate([
                'description' => 'required|max:255',
+               'titre' => 'required|max:255',
                ]);
 
             //mise à jour de l'actualité
             $actualite = Actualite::findOrFail($id);
             $actualite->description = $request->description;
-
+            $actualite->titre = $request->titre;
             if ($request->hasFile('image')) {
                 //enregistrement de la nouvelle image
             $imageName = time().'.'.$request->image->extension();  

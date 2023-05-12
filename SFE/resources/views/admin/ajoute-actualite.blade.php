@@ -35,11 +35,16 @@
                 <form class="row g-3" method="post" action="{{ route('Actualite.ajouter') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group2" >
+                        <label for="exampleFormControlTextarea1">Titre d'actualité:</label>
+                        <input class="form-control" type="text" name="titre"  aria-label="default input example">
+
+                    </div>
+                    <div class="form-group2" >
                         <label for="exampleFormControlTextarea1">description:</label>
                         <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-12">
-                        <label for="inputImage" class="form-label">Image d'actualité </label>
+                        <label for="inputImage" class="form-label">Image d'actualité: </label>
                         <input class="form-control" name="image" type="file" id="formFile">
                     </div>
                     <div class="col-12">

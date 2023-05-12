@@ -76,9 +76,12 @@
                     <div class="element active">
                     <img class="img" src="{{ asset('image/Actualite/'.$actualite->image) }}" alt="Image 1">
                     <div class="caption">
-                        
-                        <p class="p-diapo">
+                        <h1 class="h-diapo">{{ $actualite ->titre }}</h1>
+                        <div class="pp-diapo"> 
+                          <p class="p-diapo">
                             {{ $actualite ->description }}</p>
+                          </div>
+                       
                     </div>
                 </div> 
                 

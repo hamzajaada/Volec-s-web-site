@@ -372,6 +372,7 @@ i{
    font-weight: 1000;
 }
 .text-not{
+    
     margin-top: 50px;
     font-size: 1.2em;
 }
@@ -533,17 +534,25 @@ font-size: 1.3em;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 30px;
+    border-radius: 10px;
     width: 57%;
-    background-color: rgba(3, 231, 33, 0.8);
+    background-color: rgba(179, 177, 177, 0.8);
 }
-
+.h-diapo{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: aliceblue;
+    font-size: 4em;
+    font-weight: 800;
+ 
+}
 .p-diapo{
     font-family: 'Roboto Condensed', sans-serif;
     color: aliceblue;
-    font-size: 1.8em;
-    
-    text-transform: uppercase;
+     font-size: 1.2em;
+
+   
 }
+
 .statistique {
     width: 100%;
     display: flex;

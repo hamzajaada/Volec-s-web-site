@@ -68,5 +68,10 @@ Route::get('/showservice/{categorie}',
   }
 )->name('view-service');
 
-//rote qui affiche les secteurs dans services:
-
+//rote qui affiche les service dans secteurs admin:
+Route::get('/admin/showservice/{categorie}', 
+  function($categorie){
+    $services = Service::where('categorie', $categorie )->get();
+    return view('admin.service',compact('services'));
+  }
+)->name('view-service-admin1');

@@ -32,13 +32,14 @@
                <div class="card-act">
                 <div class="picture"><img src="{{  asset('image/Secteur/'.$secteur->image)  }}" alt="" srcset=""></div>
                 <div class="caption">  
-                    <p style="color:#82cf2c; margin-top:5px">Secteur d'activite:</p>
-                    <p style=" margin-top:-17px" class="p-diapo">{{ $secteur->categorie }}</p>
+                    <p class="titre-diapo">Secteur d'activite:</p>
+                    <p class="p-diapo">{{ $secteur->categorie }}</p>
+                    <a href="{{ route('view-service-admin1',$secteur->categorie) }}" class="detail">Détail ...</a>
                 </div>
                 <div class="btn-mp">
                     <form style="box-shadow: none" method="POST" action="{{ route('secteurs.supprimer',$secteur->id) }}">
                         @csrf
-                        @method('DELETE')
+                        @method('DELETE') 
                         <button style="background-color: white; border:none;margin-bottom:5px" type="submit" class="btn btn-danger"><i style="color:rgb(255, 28, 28)" class="fa-solid fa-trash"></i></button>
                     </form>
                     <a href="{{ route('secteurs.modifier', $secteur->id) }}" class="ope"><i style="color: rgba(38, 38, 211, 0.756)" class="fa-solid fa-pen-to-square"></i></a>
