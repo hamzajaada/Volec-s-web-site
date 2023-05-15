@@ -119,6 +119,13 @@ img{
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 100px;
     margin-left: 220px;
+    font-size: 3em;
+    font-weight: 800;
+    color:#82CE2F
+}
+.nav-link{
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
 .desc{
     padding-top: 20px;
@@ -191,6 +198,8 @@ img{
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     color: #82CE2F;
+    font-size: 3em;
+    font-weight: 800;
 }
 .text-ser{
     margin-left: 50px;
@@ -314,7 +323,7 @@ i{
 .content{
     width: 460px;
     height: 300px;
-    padding-left: 41px;
+    padding-left: 27px;
     padding-right: 1px;
 }
 
@@ -373,7 +382,7 @@ i{
 }
 .text-not{
     
-    margin-top: 50px;
+    margin-top: 15px;
     font-size: 1.2em;
 }
 span{
@@ -401,8 +410,12 @@ span{
     height: 380px;
 }
 .sec-titre{
+    font-family: 'Roboto Condensed', sans-serif;
+
     text-align: center;
     color: white;
+    font-size: 2em;
+    font-weight: 800;
 }
 .text-footer{
     color: white;
@@ -622,6 +635,8 @@ font-size: 1.3em;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     color: #82CE2F;
+    font-size: 3em;
+    font-weight: 800;
 }
 .containere {
   height: 80vh;
@@ -688,6 +703,8 @@ font-size: 1.3em;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     color: #82CE2F;
+    font-size: 3em;
+    font-weight: 800;
 }
 .detail{
     text-decoration: none;
@@ -700,4 +717,92 @@ font-size: 1.3em;
     
     color: #476c20;
    
+}
+.boton{
+    width: 70px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-top: 9px;
+}
+.boton-link{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.boton-link:hover{
+ color: white;
+}
+/*nos client */
+.nosclient {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.titre-nosclient {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #82CE2F;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.man {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    overflow-x: scroll;
+}
+
+.car {
+    width: 400px;
+    height: 200px;
+
+    flex-shrink: 0;
+}
+
+.swiper {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+.car img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+ .text-client{
+    width: 700px;
+    height: 400px;
+ 
+    margin-left: 150px;
+ } 
+ .mainn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+ }
+.desc-client{
+    margin-top: 78px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2em;
+
+}
+.titre-client{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #82CE2F;
+    font-weight: 800;
+    margin-left: 30px;
 }

@@ -16,7 +16,7 @@ class SecteurController extends Controller
         //validation des inputs
         $validated = $request->validate([
             'categorie' => 'required|max:255',
-
+ 
         ]);
           //enregistrement de l'image
           $imageName = time().'.'.$request->image->extension();  
@@ -73,7 +73,7 @@ class SecteurController extends Controller
 
            $secteurs->save();
 
-           return redirect()->route('show-secteur-admin')->with('success', 'Votre actualite a été modifiée avec succès.');
+           return redirect()->route('view-service')->with('success', 'Votre actualite a été modifiée avec succès.');
 
        }
        

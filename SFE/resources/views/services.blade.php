@@ -95,7 +95,7 @@
             <div class="talks">
                 <p class="talks-p">{{ $service->nom_service }}</p>
                 <div class="str"></div>
-                <a href="" class="talks-a">Détail ...</a>
+                <a href="{{ route('view-service2',$service->nom_service) }}" class="talks-a">Détail ...</a>
             </div>
            </div>
            @endforeach

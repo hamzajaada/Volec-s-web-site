@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Models\Actualite;
 use App\Models\Competence;
+use App\Models\Projet;
 use App\Models\Secteur;
 use App\Models\Service;
 
@@ -22,7 +23,8 @@ Route::get('/', function () {
     //return view('welcome');
     $actualites = Actualite::all();
     $secteurs= Secteur::all();
-    return view('welcome',compact('actualites','secteurs'));
+    $projets = DB::table('projets')->take(5)->get();
+      return view('welcome',compact('actualites','secteurs','projets'));
 })->name('home1');
 
 
@@ -35,8 +37,8 @@ Route::get('login', function () { return view('login'); })->name('login');
 
 Auth::routes();
 //Competence Routes :
-Route::post('/ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'ajouterComptence'])->name('comptence.ajouter');
-Route::get('/view-ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'vue'])->name('view-comptence.ajouter');
+//Route::post('/ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'ajouterComptence'])->name('comptence.ajouter');
+//Route::get('/view-ajouter-comptence', [App\Http\Controllers\CompetenceController::class, 'vue'])->name('view-comptence.ajouter');
 //Route::get('/affcomp', [App\Http\Controllers\CompetenceController::class, 'afficherCompetences'])->name('competences.index');
 
 //Acctualite Routes : 
@@ -75,3 +77,24 @@ Route::get('/admin/showservice/{categorie}',
     return view('admin.service',compact('services'));
   }
 )->name('view-service-admin1');
+//route qui affiche les detail des services:
+Route::get('/showservice/detail/{nom_service}', 
+  function($nom_service){
+    $services = Service::where('nom_service', $nom_service )->get();
+    $secteurs = Secteur::all();
+    $nom=$nom_service;
+    return view('detail-services',compact('services','nom','secteurs'));
+  }
+)->name('view-service2');
+Route::delete('/service/{id}', [App\Http\Controllers\ServiceController::class, 'destroy'])->name('services.supprimer');
+Route::get('/modifierservice/page/{id}', 
+  function($id){
+    $service = Service::findOrFail($id);
+    $secteurs = Secteur::all();
+    return view('admin.modifier-service',compact('secteurs','service'));
+  }
+)->name('view-service-modifer2');
+Route::put('/services/modifier/page/{id}',[App\Http\Controllers\ServiceController::class, 'update'])->name('services.modifier-ex');
+//projet route :
+Route::get('/view-ajouter-projet', [App\Http\Controllers\ProjetController::class, 'vue'])->name('view-projet.ajouter');
+Route::post('/ajouter-projet', [App\Http\Controllers\ProjetController::class, 'ajouterprojet'])->name('projet.ajouter');

@@ -170,8 +170,28 @@ $(document).ready(function() {
 
 slidesPlugin(2);
 
+/*nos client*/
 
-
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoplay: {
+    delay: 1000, // Définir la durée en millisecondes entre chaque défilement automatique (ici, 5 secondes)
+    disableOnInteraction: false, // Permettre à l'utilisateur d'interagir avec les slides sans arrêter le défilement automatique
+  },
+});
 
 
 

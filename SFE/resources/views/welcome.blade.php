@@ -33,40 +33,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Cabin:wght@500&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Murecho:wght@500&family=Open+Sans&family=Oswald&family=Outfit:wght@100&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Public+Sans:wght@600&family=Questrial&family=Quicksand&family=Roboto+Condensed&family=Roboto+Flex:opsz,wght@8..144,500&family=Rowdies:wght@700&family=Rubik:wght@500&family=Saira:wght@200&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet">
-    
+    <!--swipper css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 <body>
-    <nav style="position: fixed;width: 100%;height:7%;top:0; z-index: 999;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <img src="image/volec.png" alt="" srcset="">
-            
-            <ul>
-                <li><a href="#QUE" class="Faisons">Que faisons nous?</a></li>
-             
-                <li class="nav-item dropdown">
-                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    Secteur d'activité
-                  </a>
-
-                  <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
-                    @foreach ( $secteurs as $secteur)
-                      <a class="dropdown-item" href="{{ route('view-service' ,$secteur->categorie) }}">{{ $secteur->categorie }}</a>
-                    @endforeach
-                      
-                      
-
-                  </div>
-              </li>
-                <li><a href="#SERV" class="Nos-références">Nos références</a> </li>
-                <li><a href="#SERV" class="Nos-Client">Nos Client</a> </li>
-                <li><a href="#CON" class="Contact">Contact</a> </li>
-                
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="image/volec.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#QUE">Que faisons-nous?</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Secteur d'activité
+            </a>
+            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
+              @foreach ( $secteurs as $secteur)
+                <li><a class="dropdown-item" href="{{ route('view-service' ,$secteur->categorie) }}">{{ $secteur->categorie }}</a></li>
+              @endforeach
             </ul>
-            <div class="polic-icone">
-                <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
-            </div>
-    </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#SERV">Nos références</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#SERV">Nos clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#CON">Contact</a>
+          </li>
+        </ul>
+        <div class="polic-icone">
+          <a href="{{ route('login') }}" class="police-link"><i class="fa-solid fa-shield-halved"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
     <section class="P-1-1">
         <div class="diapo">
             <!-- Conteneur des "diapos" -->
@@ -116,7 +129,7 @@
     </section>
     <span id="QUE"></span>
     <section  class="P-2">
-      <u style="color: #82CE2F"><h1 class="titre-desc">Que faisons nous ?</h1></u> 
+    <h1 class="titre-desc">Que faisons nous ?</h1>
       <div class="desc">
         <p class="text-desc">La société VOLEC Pôle d'ingénierie et de service pour la construction, la rénovation, la main-
         tenance et l'innovation des procédés industriels. Forts de la diversité de nos expériences et de
@@ -135,7 +148,7 @@
         <!--<p class="text-ser">Volec est une entreprise de renom dans le domaine de la construction, de la rénovation, de la maintenance et de l'innovation des procédés industriels. Avec une solide expérience et un savoir-faire inégalé, Volec est reconnue pour offrir des services de haute qualité à ses clients.
 
             Que ce soit pour des projets de construction, de rénovation ou de maintenance, Volec s'engage à fournir des solutions innovantes, fiables et durables. L'entreprise dispose d'une équipe de professionnels qualifiés, qui mettent leur expertise à disposition pour répondre aux besoins spécifiques de chaque client.
-            
+             
             De plus, Volec est à la pointe de l'innovation dans les procédés industriels, en utilisant les technologies les plus avancées pour améliorer l'efficacité et la productivité des processus de production. Cette expertise dans l'innovation industrielle a permis à l'entreprise de se différencier de ses concurrents et de devenir un leader dans son secteur. ...</p>-->
             <div class="main">
                 <div class="card2-serv-wrapper">
@@ -205,83 +218,42 @@
     <section class="project">
         <h1 class="titre-project">Nos références</h1>
         <div class="containere">
+          @foreach ( $projets as $projet)
             <div
               class="slide"
-              style="background-image: url('image/ta9a.jpg');"
+              style="background-image: url('{{ asset('image/Projet/'.$projet->image) }}');"
             >
         
               <div class="title">
-                <h3>AÉROPORT INTERNATIONAL DE NOUAKCHOUTT</h3>
-                <small>NOUAKCHOUTT</small>
+                <h3 style="font-family: 'Roboto Condensed', sans-serif;    color: white;">{{ $projet->nom_projet }}</h3>
+                <small style="font-family: 'Roboto Condensed', sans-serif;    color: white;">{{ $projet->nom_entreprise }} | {{ $projet->localisation_entreprise }} </small>
+                <div class="boton"><a href="" class="boton-link">Voir plus</a></div>
               </div>
             </div>
-            <div
-            class="slide"
-            style="background-image: url('image/elec.jpg');"
-          >
-      
-            <div class="title">
-              <h3>AÉROPORT INTERNATIONAL DE NOUAKCHOUTT</h3>
-              <small>NOUAKCHOUTT</small>
+            @endforeach
+     
             </div>
-          </div>
-          <div
-          class="slide"
-          style="background-image: url('image/frfra.jpg');"
-        >
-    
-          <div class="title">
-            <h3>AÉROPORT INTERNATIONAL DE NOUAKCHOUTT</h3>
-            <small>NOUAKCHOUTT</small>
-          </div>
-        </div>
-        <div
-        class="slide"
-        style="background-image: url('image/anti.jpg');"
-      >
-  
-        <div class="title">
-          <h3>AÉROPORT INTERNATIONAL DE NOUAKCHOUTT</h3>
-          <small>NOUAKCHOUTT</small>
+    </section>
+    <section class="nosclient">
+      <h1 class="titre-nosclient">Nos Clients</h1>
+      <div class="mainn">
+      <div class="text-client">
+        <p class="desc-client">Grâce à notre travail acharné, à notre organisation solide et à notre engagement envers l'excellence, VOLEC Casablanca est fier de gagner la confiance des grandes entreprises mondiales. Notre expertise et notre expérience nous permettent de collaborer avec des leaders mondiaux, offrant des solutions innovantes et répondant aux besoins spécifiques de chaque entreprise. Nous sommes prêts à relever de nouveaux défis et à établir des partenariats fructueux avec les entreprises de renommée internationale. Faites-nous confiance pour réaliser vos ambitions et atteindre vos objectifs stratégiques</p>
+        <h2 class="titre-client">" Confiance mondiale, notre défi permanent "</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="car swiper-slide"><img  src="image/accor.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/emsi.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/raunlt.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/total.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/ocp.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/sofitel.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/cih.jpg" alt="" srcset=""></div>
+          <div class="car swiper-slide"><img src="image/uca.jpg" alt="" srcset=""></div>
         </div>
       </div>
-            <div
-              class="slide"
-              style="background-image: url('https://images.unsplash.com/photo-1599722585837-c1cb8eea32ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"
-            >
-              <div class="title">
-                <h3>Hamburg</h3>
-                <small>Germani</small>
-              </div>
-            </div>
-            <div
-              class="slide"
-              style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80');"
-            >
-              <div class="title">
-                <h3>Costa Rica</h3>
-                <small>Alajuela</small>
-              </div>
-            </div>
-            <div
-              class="slide"
-              style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80');"
-            >
-              <div class="title">
-                <h3>San Diego</h3>
-                <small>CA, USA</small>
-              </div>
-            </div>
-            <div
-              class="slide"
-              style="background-image: url('https://images.unsplash.com/photo-1592494804071-faea15d93a8a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80');"
-            >
-              <div class="title">
-                <h3>Taghazout</h3>
-                <small>Morocco</small>
-              </div>
-            </div>
-            </div>
+    </div>
     </section>
     <section class="P-5">
         <i id="icone" class="fa-solid fa-square-envelope"></i>
@@ -316,6 +288,8 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 <script src="js/diaporama.js"></script>
 
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

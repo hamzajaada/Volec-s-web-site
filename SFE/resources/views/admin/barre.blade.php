@@ -87,12 +87,12 @@
                         <span  style="color:black"class="tooltip"> Ajouter Secteur d'activite </span>
                     </li>
                     <li>
-                        <a href="{{ route('view-comptence.ajouter') }}">
+                        <a href="{{ route('view-projet.ajouter') }}">
                             
                             <i class="fa fa-plus"></i>
-                            <span class="links_name"> Compétence</span>
+                            <span class="links_name"> Projet</span>
                         </a>
-                        <span  style="color:black"class="tooltip">  Ajouter Compétence</span>
+                        <span  style="color:black"class="tooltip">  Ajouter Projet</span>
                     </li>
                     
                
