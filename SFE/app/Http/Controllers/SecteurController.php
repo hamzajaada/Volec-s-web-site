@@ -55,22 +55,21 @@ class SecteurController extends Controller
        }
        public function update(Request $request, $id)
        {
-         //validation des inputs
+        
+           //validation des inputs
             $validated = $request->validate([
               'categorie' => 'required|max:255',
               ]);
-
            //mise à jour de l'actualité
            $secteurs = Secteur::findOrFail($id);
            $secteurs->categorie = $request->categorie;
 
            if ($request->hasFile('image')) {
-               //enregistrement de la nouvelle image
+           //enregistrement de la nouvelle image
            $imageName = time().'.'.$request->image->extension();  
            $request->image->move(public_path('image/Secteur'), $imageName);
            $secteurs->image = $imageName;
             }
-
            $secteurs->save();
 
            return redirect()->route('view-service')->with('success', 'Votre actualite a été modifiée avec succès.');

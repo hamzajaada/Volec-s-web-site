@@ -29,12 +29,12 @@
                 </li>
               
                 <li>
-                    <a href="">
+                    <a href="{{ route('view-projet-admin') }}">
                     
-                        <i class="fa fa-wrench"></i>
-                        <span class="links_name">Services</span>
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span class="links_name">Projet</span>
                     </a>
-                    <span style="color:black" class="tooltip">Services</span>
+                    <span style="color:black" class="tooltip">Projet</span>
                 </li>
                 <li>
                     <a href="">

@@ -233,6 +233,7 @@
             @endforeach
      
             </div>
+            <div class="btn-prj"><a href="{{route('view-projet')}}" class="link-prj"> Voir plus ...</a></div>
     </section>
     <section class="nosclient">
       <h1 class="titre-nosclient">Nos Clients</h1>

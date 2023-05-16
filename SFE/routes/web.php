@@ -98,3 +98,26 @@ Route::put('/services/modifier/page/{id}',[App\Http\Controllers\ServiceControlle
 //projet route :
 Route::get('/view-ajouter-projet', [App\Http\Controllers\ProjetController::class, 'vue'])->name('view-projet.ajouter');
 Route::post('/ajouter-projet', [App\Http\Controllers\ProjetController::class, 'ajouterprojet'])->name('projet.ajouter');
+Route::get('/projet',function(){
+  $projects= Projet::all();
+  $secteurs = Secteur::all();
+       return view('projet',compact('secteurs','projects'));
+})->name('view-projet');
+Route::get('/projet-table/{nom_entreprise}',function($nom_entreprise){
+  $projects= Projet::where('nom_entreprise', $nom_entreprise )->get();;
+  $secteurs = Secteur::all();
+  $nom=$nom_entreprise;
+  return view('table-projet',compact('secteurs','projects','nom'));
+})->name('view-projet-table');
+Route::get('/projet/admin',function(){
+  $projects= Projet::all();
+  return view('admin.projet',compact('projects'));
+})->name('view-projet-admin');
+Route::delete('/projets/{id}', [App\Http\Controllers\ProjetController::class, 'destroy'])->name('projets.supprimer');
+Route::get('/modifierservice/page/{id}', 
+  function($id){
+    $projects = Projet::findOrFail($id);
+    return view('admin.modifier-projet',compact('projects'));
+  }
+)->name('view-projet2');
+Route::put('/projets/modifier/page/{id}',[App\Http\Controllers\ProjetController::class, 'update'])->name('projets.modifier-ex');
