@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('Nom_client');
-            $table->string('image_client');
-            $table->string('lien_website');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -265,13 +265,13 @@ i{
      
    
 }
-.button-2{
+.button-2 {
     width: 203px;
     height: 35px;
     border-radius: 7px;
     background-color: white;
     margin-left: 675px;
-    padding-top: 3px;
+    padding-top: -9px;
     margin-top: 50px;
     transition: 0.7s ease;
     cursor: pointer;
@@ -280,10 +280,10 @@ i{
     background-color: rgb(220, 220, 220);
     transform: scale(1.11);
 }
-.contact-us{
+.contact-us {
     text-decoration: none;
-    color:#82CE2F;
-    margin-left: 35px;
+    color: #82CE2F;
+    margin-left: 24px;
     font-size: 1.3em;
     font-weight: 700;
 }
@@ -841,9 +841,9 @@ font-size: 1.3em;
         height: 300px;
         padding-top: 36px;
         padding-bottom: 20px;
-        width: 327%;}
+        width: 357%;;}
     .P-1-1 {
-        width: 327%;
+        width: 357%;
         margin: auto;
         height: 100%;
     }
@@ -860,7 +860,7 @@ font-size: 1.3em;
     .P-2 {
         margin-top: 120px;
         display: block;
-        width: 129%;
+        width: 154%;
     }
     .desc {
         padding-top: 20px;
@@ -878,7 +878,7 @@ font-size: 1.3em;
         margin-right: -859px;
     }
     .main {
-        width: 326%;
+        width: 355%;
         overflow-x: scroll;
         white-space: nowrap;
         overflow: hidden;
@@ -893,7 +893,7 @@ font-size: 1.3em;
         margin-right: -932px;
     }
     .bottnn {
-        margin-left: 191px;
+        margin-left: 163px;
         display: flex;
     }
     .P-6 {
@@ -903,7 +903,7 @@ font-size: 1.3em;
         background-color: #eef3ef;
         padding-bottom: 30px;
         height: 100%;
-        width: 326%;
+        width: 355%;
         margin-bottom: 30px;
     }
     .notif {
@@ -936,7 +936,7 @@ font-size: 1.3em;
     }
     .nosclient {
         margin-top: 40px;
-        width: 326%;
+        width: 362%;
         height: 100%;
     }
     .project {
@@ -945,11 +945,47 @@ font-size: 1.3em;
     }
     .containere {
         height: 80vh;
-        width: 285%;
+        width: 330%;
         margin-top: 37px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
+    }
+    .titre-nosclient {
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #82CE2F;
+        font-size: 3em;
+        font-weight: 800;
+        margin-right: 62px;
+    }
+    #icone {
+        color: #82CE2F;
+        margin-left: 598px;
+        font-size: 6.3em;
+        margin-bottom: 20px;
+    }
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        background-image: var(--bs-navbar-toggler-icon-bg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        margin-left: -145px;
+    }
+    .button-2 {
+        width: 203px;
+        height: 35px;
+        border-radius: 7px;
+        background-color: white;
+        margin-left: 543px;
+        padding-top: 3px;
+        margin-top: 50px;
+        transition: 0.7s ease;
+        cursor: pointer;
     }
     .titre-project {
         text-align: center;
@@ -957,21 +993,21 @@ font-size: 1.3em;
         color: #82CE2F;
         font-size: 3em;
         font-weight: 800;
-        margin-right: -719px;
+        margin-right: -861px;
     }
     .btn-prj {
-        width: 120px;
+        width: 115px;
         height: 50px;
         border: 4px solid #82CE2F;
         border-radius: 12px;
-        margin-left: 490px;
+        margin-left: 577px;
         margin-top: 30px;
         padding-top: 10px;
     }
     .P-5 {
         padding-top: 30px;
         margin-top: 20px;
-        width: 326%;
+        width: 357%;
         height: 400px;
         background-color: #eef3ef;
         margin-bottom: 70px;
@@ -979,7 +1015,7 @@ font-size: 1.3em;
     .P-7 {
         padding-top: 10px;
         margin-top: 20px;
-        width: 326%;
+        width: 358%;
         height: 400px;
         background-color: rgb(79, 79, 79);
         display: flex;

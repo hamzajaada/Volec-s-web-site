@@ -225,8 +225,8 @@
             >
         
               <div class="title">
-                <h3 style="font-family: 'Roboto Condensed', sans-serif;    color: white;">{{ $projet->nom_projet }}</h3>
-                <small style="font-family: 'Roboto Condensed', sans-serif;    color: white;">{{ $projet->nom_entreprise }} | {{ $projet->localisation_entreprise }} </small>
+                <h3 style="font-family: 'Roboto Condensed', sans-serif; font-size:3em; font-weight: 700;">{{ $projet->nom_projet }}</h3>
+                <small style="font-family: 'Roboto Condensed', sans-serif;    font-size:2em; font-weight: 700;">{{ $projet->nom_entreprise }} | {{ $projet->localisation_entreprise }} </small>
                 <div class="boton"><a href="" class="boton-link">Voir plus</a></div>
               </div>
             </div>
@@ -244,14 +244,11 @@
       </div>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="car swiper-slide"><img  src="image/accor.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/emsi.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/raunlt.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/total.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/ocp.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/sofitel.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/cih.jpg" alt="" srcset=""></div>
-          <div class="car swiper-slide"><img src="image/uca.jpg" alt="" srcset=""></div>
+          @foreach ( $clients as $client )
+             <div class="car swiper-slide"><img  src="{{ asset('image/Cliente/'.$client->image) }}" alt="" srcset=""></div>
+          @endforeach
+         
+         
         </div>
       </div>
     </div>

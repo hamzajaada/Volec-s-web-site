@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Models\Actualite;
+use App\Models\Client;
 use App\Models\Competence;
 use App\Models\Projet;
 use App\Models\Secteur;
@@ -24,7 +25,8 @@ Route::get('/', function () {
     $actualites = Actualite::all();
     $secteurs= Secteur::all();
     $projets = DB::table('projets')->take(5)->get();
-      return view('welcome',compact('actualites','secteurs','projets'));
+    $clients = Client::all();
+      return view('welcome',compact('actualites','secteurs','projets','clients'));
 })->name('home1');
 
 
@@ -121,3 +123,9 @@ Route::get('/modifierservice/page/{id}',
   }
 )->name('view-projet2');
 Route::put('/projets/modifier/page/{id}',[App\Http\Controllers\ProjetController::class, 'update'])->name('projets.modifier-ex');
+//client routes:
+route::get('/ajoute-client',function(){
+    return view('admin.ajoute-client');
+
+})->name('ajoute-client-view');
+Route::post('/ajouter-ClientF', [App\Http\Controllers\ClientController::class, 'ajouterClient'])->name('Client.ajouter');

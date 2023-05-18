@@ -192,7 +192,41 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false, // Permettre à l'utilisateur d'interagir avec les slides sans arrêter le défilement automatique
   },
 });
+//reload 
+window.addEventListener('load', function() {
+  const nbClient = document.querySelector('.nb-client p:first-child');
+  const chiffre = document.querySelector('.chiffre p:first-child');
+  const anneeEx = document.querySelector('.annee-ex p:first-child');
 
+  const targetNbClient = 70; // Nombre cible pour les clients satisfaits
+  const targetChiffre = 50; // Nombre cible pour le chiffre en croissance
+  const targetAnneeEx = 22; // Nombre cible pour les années d'expérience
+
+  let currentNbClient = 0;
+  let currentChiffre = 0;
+  let currentAnneeEx = 0;
+
+  const incrementNumbers = function() {
+    if (currentNbClient < targetNbClient) {
+      currentNbClient++;
+      nbClient.textContent = '+' + currentNbClient;
+    }
+    if (currentChiffre < targetChiffre) {
+      currentChiffre++;
+      chiffre.textContent = '+' + currentChiffre + 'M€';
+    }
+    if (currentAnneeEx < targetAnneeEx) {
+      currentAnneeEx++;
+      anneeEx.textContent = '+' + currentAnneeEx;
+    }
+
+    if (currentNbClient < targetNbClient || currentChiffre < targetChiffre || currentAnneeEx < targetAnneeEx) {
+      setTimeout(incrementNumbers, 105); // Temps en millisecondes entre chaque incrémentation
+    }
+  };
+
+  incrementNumbers();
+});
 
 
   

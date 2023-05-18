@@ -94,7 +94,14 @@
                         </a>
                         <span  style="color:black"class="tooltip">  Ajouter Projet</span>
                     </li>
-                    
+                    <li>
+                        <a href="{{ route('ajoute-client-view') }}">
+                            
+                            <i class="fa fa-plus"></i>
+                            <span class="links_name"> Client</span>
+                        </a>
+                        <span  style="color:black"class="tooltip">  Ajouter Client</span>
+                    </li>
                
                  
                    
