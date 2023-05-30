@@ -25,7 +25,17 @@
             <section class="main-sec1">
                 @extends('admin.Barre')
             </section>
+            <h1 style="
+            margin-left:120px;
+            margin-bottom:-50px;
+            text-align:center;
+            color: #82cf28;
+            
+            margin-top:80px;
+            
+            "> Les Projets</h1>
             <section class="AF">
+
                 @foreach ( $projects as $projet  )
                     
                
@@ -34,7 +44,7 @@
                 <div class="caption">  
                     <p class="titre-diapo">Projet:</p>
                     <p class="p-diapo">{{ $projet->nom_projet }}</p>
-                    <a href="" class="detail">Détail ...</a>
+                    <a href="{{ route('view-projet-detail', $projet->id) }}" class="detail">Détail ...</a>
                 </div>
                 <div class="btn-mp">
                     <form style="box-shadow: none" method="POST" action="{{ route('projets.supprimer',$projet->id) }}">

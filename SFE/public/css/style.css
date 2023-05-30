@@ -417,11 +417,10 @@ span{
     font-size: 2em;
     font-weight: 800;
 }
-.text-footer{
+.text-footer {
     color: white;
-    margin-left:-190px;
-    font-size: 1.3em;
-
+    margin-left: -190px;
+    font-size: 1.1em;
 }
 .desc-footer{
     margin-top: 70px;
@@ -1022,4 +1021,4 @@ font-size: 1.3em;
         bottom: 0;
     }
 
-}
+} 

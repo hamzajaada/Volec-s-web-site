@@ -19,8 +19,12 @@ ul{
    margin-left: 50px;
 }
 li{
-    margin-right: 70px;
+    margin-right: 254px;
     list-style: none;
+}
+#navbarNav{
+    margin-right: 300px;
+    margin-top: -15px;
 }
 .Contact,.Faisons,.menu,.Services,.Projets ,.Nos-références,.Nos-Client{
     text-decoration: none;
@@ -177,4 +181,48 @@ img{
     border: 1px solid rgb(228, 228, 228);
     margin-left: 40px;
     margin-bottom: 4px;
+}
+@media screen and (max-width:620px){
+    .P1 {
+        width: 186%;
+        height: 103%;
+        margin-top: 53px;
+        background-color: #82cf2c;
+        padding: 35px;
+    }
+    .t-m1 {
+        margin-left: 22px;
+        color: rgb(84, 84, 84);
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+    }
+    .m1-link {
+        text-decoration: none;
+        color: rgb(128, 128, 128);
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-left: 26px;
+    }
+    .card {
+        margin-left: -40px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgb(235, 232, 232);
+        box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+        margin-bottom: 34px;
+    }
+
+   
+    .m1 {
+        width: 377px;
+        height: 400px;
+        margin-left: 34px;
+        border: 1px solid rgb(195, 195, 195);
+        border-radius: 7px;
+    }
+
+
+
+
 }

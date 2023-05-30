@@ -25,4 +25,11 @@ class ClientController extends Controller
     
         return redirect()->route('home1')->with('success', 'Votre service a été créée avec succès.');
     }
+    
+    public function destroy($id)
+    {
+        $clients = Client::findorFail($id);
+        $clients->delete();
+        return redirect()->back()->with('success', 'Votre offre a été supprimer avec succès.');
+    }
 }

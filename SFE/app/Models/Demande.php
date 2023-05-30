@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Demande extends Model
 {
     use HasFactory;
+    protected $fillable=['id','email','objet','categorie','telephone'];
+
 }

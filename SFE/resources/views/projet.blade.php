@@ -9,7 +9,7 @@
 
 
 
-    <title>VolecGroup</title>
+    <title>VolecGroup / Projet</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store of skills</title>
+   
     {{-- LINK CSS --}}
     <link rel="stylesheet" href="{{ asset('css/projet.css') }}">
 
@@ -46,27 +46,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+          
               <li class="nav-item">
-                <a class="nav-link" href="#QUE">Que faisons-nous?</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Secteur d'activité
-                </a>
-                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
-                  @foreach ( $secteurs as $secteur)
-                    <li><a class="dropdown-item" href="{{ route('view-service' ,$secteur->categorie) }}">{{ $secteur->categorie }}</a></li>
-                  @endforeach
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"  href="#SERV">Nos références</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#SERV">Nos clients</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#CON">Contact</a>
+                <a class="nav-link" href="{{ route('home1') }}">Accueil</a>
               </li>
             </ul>
           </div>

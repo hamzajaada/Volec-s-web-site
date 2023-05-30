@@ -64,13 +64,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#SERV">Nos références</a>
+            <a class="nav-link"  href="#REF">Nos références</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#SERV">Nos clients</a>
+            <a class="nav-link" href="#Client">Nos clients</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#CON">Contact</a>
+            <a class="nav-link" href="#Con">Contact</a>
           </li>
         </ul>
         <div class="polic-icone">
@@ -151,6 +151,7 @@
              
             De plus, Volec est à la pointe de l'innovation dans les procédés industriels, en utilisant les technologies les plus avancées pour améliorer l'efficacité et la productivité des processus de production. Cette expertise dans l'innovation industrielle a permis à l'entreprise de se différencier de ses concurrents et de devenir un leader dans son secteur. ...</p>-->
             <div class="main">
+             
                 <div class="card2-serv-wrapper">
                   @foreach ( $secteurs as $secteur)
                   <div class="card2-serv">
@@ -174,7 +175,7 @@
         <button class="scroll-left"><i style="font-size: 3em" class="fa-solid fa-circle-chevron-left"></i></button>
         <button class="scroll-right"><i style="font-size: 3em" class="fa-solid fa-circle-chevron-right"></i></button>
     </div>
-    <span id="CON"></span>
+    
 
    
 
@@ -215,6 +216,7 @@
     
         
     </section> 
+    <span id="REF"></span>
     <section class="project">
         <h1 class="titre-project">Nos références</h1>
         <div class="containere">
@@ -227,14 +229,15 @@
               <div class="title">
                 <h3 style="font-family: 'Roboto Condensed', sans-serif; font-size:3em; font-weight: 700;">{{ $projet->nom_projet }}</h3>
                 <small style="font-family: 'Roboto Condensed', sans-serif;    font-size:2em; font-weight: 700;">{{ $projet->nom_entreprise }} | {{ $projet->localisation_entreprise }} </small>
-                <div class="boton"><a href="" class="boton-link">Voir plus</a></div>
+                <div class="boton"><a href="{{ route('view-projet-table',$projet->nom_entreprise) }}" class="boton-link">Voir plus</a></div>
               </div>
             </div>
             @endforeach
-     
+      
             </div>
             <div class="btn-prj"><a href="{{route('view-projet')}}" class="link-prj"> Voir plus ...</a></div>
     </section>
+    <span id="Client" ></span>
     <section class="nosclient">
       <h1 class="titre-nosclient">Nos Clients</h1>
       <div class="mainn">
@@ -253,6 +256,7 @@
       </div>
     </div>
     </section>
+    <span id="Con"></span>
     <section class="P-5">
         <i id="icone" class="fa-solid fa-square-envelope"></i>
         <h1 class="titre-P-5">Contactez-nous dès maintenant pour découvrir comment nous pouvons vous aider à construire, rénover, maintenir et innover vos processus industriels pour assurer votre succès.</h1>
@@ -265,6 +269,7 @@
             <p class="text-footer"><i class="fas fa-map-pin"></i>   Casablanca,Maroc.</p>
             <p class="text-footer"><i class="fas fa-phone-alt"></i>  +212(0) 5 22 75 71 76 .</p>
             <p class="text-footer"><i class="fas fa-envelope"></i>  <a href="mailto:volec@menara.ma" class="mail"> volec@menara.ma</a></p>
+
             </div>
         </div>
         <div class="sec2">
@@ -280,11 +285,15 @@
             <div class="lien-reb">
             <a href="" class="reb-lien">Que faisons nous ?</a> <br>
             <a href="" class="reb-lien">Contactez-Nous</a> <br>
-            <a href="" class="reb-lien">Nos Services</a> <br>
-            <a href="" class="reb-lien"> Nos Compètences</a> <br>
+            <a href="" class="reb-lien">Secteur d'activité</a> <br>
+            <a href="" class="reb-lien">Nos Clients</a> <br>
+            <a href="" class="reb-lien">Nos références</a> <br>
             </div>
         </div>
+
     </section>
+    <p style="color:black margin-left:0px;text-align:center">Copyright © VolecGroup 2023 || All Rights Reserved.</p>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 

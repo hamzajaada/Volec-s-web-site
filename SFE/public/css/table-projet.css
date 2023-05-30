@@ -129,3 +129,26 @@ ul{
     border-radius: 3px;
     margin-bottom: 40px;
 }
+@media screen and (max-width:620px){
+
+    .P1 {
+        width: 304%;
+        height: 103%;
+        margin-top: 53px;
+        background-color: #82cf2c;
+        padding: 35px;
+    }
+    .main {
+        width: 290%;
+        height: 156%;
+        display: flex;
+        margin-top: 20px;
+    }
+    .img-entr img {
+        width: 700px;
+        height: 300px;
+        margin-left: 163px;
+        border-radius: 3px;
+        margin-bottom: 40px;
+    }
+}

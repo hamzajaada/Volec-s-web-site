@@ -19,8 +19,12 @@ ul{
    margin-left: 50px;
 }
 li{
-    margin-right: 70px;
+    margin-right: 254px;
     list-style: none;
+}
+#navbarNav{
+    margin-right: 300px;
+    margin-top: -15px;
 }
 .Contact,.Faisons,.menu,.Services,.Projets ,.Nos-références,.Nos-Client{
     text-decoration: none;
@@ -195,4 +199,15 @@ img{
     color: #82CE2F;
     margin-bottom: 30px;
     font-size: 3em;
+}
+@media screen and (max-width:620px){
+
+
+    .P1 {
+        width: 311%;
+        height: 103%;
+        margin-top: 53px;
+        background-color: #82cf2c;
+        padding: 35px;
+    }
 }

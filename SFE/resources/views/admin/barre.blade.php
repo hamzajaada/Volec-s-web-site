@@ -37,14 +37,21 @@
                     <span style="color:black" class="tooltip">Projet</span>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ route('demandes-admin') }}">
                          
                         <i class="fa fa-inbox"></i>
                         <span class="links_name">Demandes</span>
                     </a>
                     <span style="color:black" class="tooltip">Demandes</span>
                 </li>
-
+                <li>
+                    <a href="{{ route('view-clients') }}">
+                         
+                        <i class="fa-sharp fa-regular fa-handshake"></i>
+                        <span class="links_name">Client</span>
+                    </a>
+                    <span style="color:black" class="tooltip">Client</span>
+                </li>
                 <li>
                     <a href="{{ route('show-actualite-admin') }}">
                          

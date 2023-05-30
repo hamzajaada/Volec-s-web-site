@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Models\Actualite;
 use App\Models\Client;
 use App\Models\Competence;
+use App\Models\Demande;
 use App\Models\Projet;
 use App\Models\Secteur;
 use App\Models\Service;
@@ -89,13 +90,13 @@ Route::get('/showservice/detail/{nom_service}',
   }
 )->name('view-service2');
 Route::delete('/service/{id}', [App\Http\Controllers\ServiceController::class, 'destroy'])->name('services.supprimer');
-Route::get('/modifierservice/page/{id}', 
+  Route::get('/detailservice/{id}',
   function($id){
     $service = Service::findOrFail($id);
-    $secteurs = Secteur::all();
-    return view('admin.modifier-service',compact('secteurs','service'));
-  }
-)->name('view-service-modifer2');
+  $secteurs = Secteur::all();
+  return view('admin.modifier-service',compact('secteurs','service'));
+}
+)->name('modifer-detail-service');
 Route::put('/services/modifier/page/{id}',[App\Http\Controllers\ServiceController::class, 'update'])->name('services.modifier-ex');
 //projet route :
 Route::get('/view-ajouter-projet', [App\Http\Controllers\ProjetController::class, 'vue'])->name('view-projet.ajouter');
@@ -123,9 +124,32 @@ Route::get('/modifierservice/page/{id}',
   }
 )->name('view-projet2');
 Route::put('/projets/modifier/page/{id}',[App\Http\Controllers\ProjetController::class, 'update'])->name('projets.modifier-ex');
+Route::get('/detailservice/page/{id}', 
+  function($id){
+    $projets = Projet::findOrFail($id);
+    return view('admin.Detail-project',compact('projets'));
+  }
+)->name('view-projet-detail');
 //client routes:
 route::get('/ajoute-client',function(){
     return view('admin.ajoute-client');
 
 })->name('ajoute-client-view');
 Route::post('/ajouter-ClientF', [App\Http\Controllers\ClientController::class, 'ajouterClient'])->name('Client.ajouter');
+Route::get('/client',function(){
+  $clients= Client::all();
+       return view('admin.client',compact('clients'));
+})->name('view-clients');
+Route::delete('/clients/{id}', [App\Http\Controllers\ClientController::class, 'destroy'])->name('clients.supprimer');
+
+//demandes Routes :
+Route::get('/contact', function () { 
+  $secteurs = Secteur::all();
+  return view('contact',compact('secteurs'));
+ })->name('contact');
+ Route::post('/ajouter-demande', [App\Http\Controllers\DemandeController::class, 'ajouterdemande'])->name('demande.ajouter');
+Route::get('/demande' , function(){
+  $demandes = Demande::all();
+  return view('admin.demandes',compact('demandes'));
+
+})->name('demandes-admin');

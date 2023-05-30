@@ -24,25 +24,35 @@
         <section class="services-p">
             <section class="main-sec1">
                 @extends('admin.Barre')
-            </section>
+            </section>      
+             <h1 style="
+                margin-left:225px;
+                margin-bottom:50px;
+                font-family: 'Roboto Condensed', sans-serif;
+                text-align:center;
+                margin-top:100px;
+                color: rgb(221, 76, 76);
+                
+                
+                "> Les services </span></h1>
             <section class="AF">
+              
                 @foreach ( $services as $service  )
-                    
-               
+          
                <div class="card-act">
                 <div class="picture"><img src="{{  asset('image/Servic/'.$service->image)  }}" alt="" srcset=""></div>
                 <div class="caption">  
                     <p class="titre-diapo">Service:</p>
                     <p class="p-diapo">{{ $service->nom_service }}</p>
-                    <a href="" class="detail">Détail ...</a>
+                
                 </div>
                 <div class="btn-mp">
                     <form style="box-shadow: none" method="POST" action="{{ route('services.supprimer',$service->id) }}">
                         @csrf
                         @method('DELETE') 
                         <button style="background-color: white; border:none;margin-bottom:5px" type="submit" class="btn btn-danger"><i style="color:rgb(255, 28, 28)" class="fa-solid fa-trash"></i></button>
-                    </form>
-                    <a href="{{ route('view-service-modifer2',$service->id) }}" class="ope"><i style="color: rgba(38, 38, 211, 0.756)" class="fa-solid fa-pen-to-square"></i></a>
+                    </form> 
+                    <a href="{{ route('modifer-detail-service',$service->id) }}" class="ope"><i style="color: rgba(38, 38, 211, 0.756)" class="fa-solid fa-pen-to-square"></i></a>
 
                 </div>
                </div>

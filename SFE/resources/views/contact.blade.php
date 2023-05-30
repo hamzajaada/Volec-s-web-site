@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store of skills</title>
+    <title>Contact</title>
     {{-- LINK CSS --}}
     <link rel="stylesheet" href="css/style-contact.css">
 
@@ -40,9 +40,8 @@
             <img src="image/volec.png" alt="" srcset="">
             
             <ul>
-                <li><a href="" class="Faisons">Que faisons nous?</a></li>
-                <li><a href="" class="Services">Services</a> </li>
-                <li><a href="" class="menu">Menu</a> </li>
+                <li><a href="{{ route('home1') }}" class="Faisons">Accueil</a></li>
+             
                 
             </ul>
             <div class="link">
@@ -52,32 +51,32 @@
     </nav>
     <section class="AF"  >
         <div class="info-compte">
-            <form class="row g-3" method="post" action="" enctype="multipart/form-data">
+            <form class="row g-3" method="post" action="{{ route('demande.ajouter') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Adresse Email :</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlNumber">Numéro de téléphone :</label>
+                    <input type="tel" class="form-control" name="telephone" id="exampleFormControlNumber" pattern="[0-9]{10}" required>
                   </div>
                   <div class="mb-3">
                     <label  class="form-label">Objet:</label>
-                    <input type="text" class="form-control" id="" aria-describedby="">
+                    <input type="text" name="objet" class="form-control" id="" aria-describedby="">
                   </div>
                 <div class="form-group2">
                     <label for="exampleFormControlSelect1">Catégorie de service:</label><br>
                     <select class="form-select" aria-label="Default select example"  name="categorie" id="exampleFormControlSelect1">
-                        <option value="Solutions d'Equipement MT">Solutions d'Equipement MT</option>
-                        <option value="Solutions d'Equipement BT">Solutions d'Equipement BT</option>
-                        <option value="Solutions d'Automatisation">Solutions d'Automatisation</option>
-                        <option value="Solutions du Courant Faible">Solutions du Courant Faible</option>
-                        <option value="Solutions d'Eclairage">Solutions d'Eclairage</option>
-                        <option value="Solutions Antidéflagrante">Solutions Antidéflagrante</option>
-                
+                            @foreach ( $secteurs as $secteur )
+                                  <option value="{{ $secteur->categorie }}">{{ $secteur->categorie }}</option>
+                            @endforeach      
                     </select>
                 </div> 
      
                 <div class="form-group2" >
                     <label for="exampleFormControlTextarea1">Message:</label>
-                    <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 
                 

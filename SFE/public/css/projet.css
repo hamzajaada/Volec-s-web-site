@@ -18,8 +18,9 @@ ul{
     margin-top: 23px;
    margin-left: 50px;
 }
-li{
-    margin-right: 70px;
+li {
+    margin-left: -88px;
+
     list-style: none;
 }
 .Contact,.Faisons,.menu,.Services,.Projets ,.Nos-références,.Nos-Client{
@@ -68,6 +69,10 @@ background-color: #82CE2F;
 img{
     width: 100px;
     height: 40px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
 }
 .police-link{
     color: #82CE2F;
@@ -157,4 +162,27 @@ i{
 }
 .list-link:hover{
     color: white;
+}
+@media screen and (max-width:620px){
+    .P1 {
+        width: 143%;
+        height: 103%;
+        margin-top: 53px;
+        background-color: #82cf2c;
+        padding: 35px;
+    }
+    .main {
+        width: 136%;
+        height: 100%;
+        display: flex;
+        margin-top: 20px;
+    }
+    .card {
+        width: 400px;
+        height: 300px;
+        border: 1px solid rgb(235, 232, 232);
+        box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+        margin-left: -17px;
+        margin-bottom: 34px;
+    }
 }
